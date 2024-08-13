@@ -1,0 +1,10 @@
+#skill-card {
+   border-color: #292947;
+   border-style: solid;
+   box-shadow: 6px 6px 6px #292947;
+   scale: (1,1);
+}
+
+#skill-card:hover {
+  
+}
