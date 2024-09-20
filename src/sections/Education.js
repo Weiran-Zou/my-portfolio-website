@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react"
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import unimelb from '../imgs/unimelb-logo.png'
+// import unimelb from '../imgs/unimelb-logo.png'
 import SchoolIcon from '@mui/icons-material/School';
 import { motion, useInView, useAnimation } from "framer-motion"
 
@@ -13,7 +13,7 @@ export default function Education() {
         if(isInView) {
             mainControl.start("show")
         }
-    }, [isInView])
+    }, [isInView, mainControl])
     return (
         <div id="education" class="container" >
             <motion.div 
