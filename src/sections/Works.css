@@ -1,33 +1,47 @@
-
-.project-container {
-    z-index: 1;
+#works {
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: flex; 
+    flex-direction: column;
     flex-wrap: wrap;  
-    flex: 0 0 30%;
     justify-content: center;
-    .card-link {
-        width: 45%; 
-        max-width: 45%;
-        flex-grow: 1;
-        text-decoration: none;
-    }
+    align-items: center;
+    
+}
+.project-container {
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: wrap;  
+    justify-content: center;
+    
+    
+    
   }
 .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #292947;
     color: white;
-    
-    height: 80vh;
     border-radius: 15px;
-    margin: 1rem;
+    margin: 0.5rem;
+    width: calc(100% - 1rem);
+    height: 490px;
+    max-width: 330px;
+    overflow: hidden;
     img {
         padding: 0 1.5rem;
         width: 100%;
         height: 45%;
+        max-height: 45%;
+      
     }
     .card-body {
         
-        padding: 0 2rem;
-        text-align: left;
+        padding: 1rem; /* Add padding around the content */
+        flex-grow: 1; /* Allows content to take remaining space */
+        display: flex;
+        flex-direction: column; /* Aligns the content vertically */
     }
     .card-title {
         margin-bottom: 1rem;
@@ -35,23 +49,22 @@
     .techList {
         list-style: none;
         padding: 0;
-        font-size: 0.9rem;
         color: #8686F1;
         align-items: left;
+        font-size: 0.875rem;
     }
     .techList li {
         display: inline-block;
-        
-        padding: 0.5rem;
+        padding: 0.3rem;
         margin: 0.3rem;
         border-radius: 15px;
         background-color:#19262E
     }
     .card-text {
-        /* -webkit-line-clamp: 3;
+        -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        display: -webkit-box; */
+        display: -webkit-box;
     }
     .project-btn {
         /* background-color: #FF3CAC;
@@ -59,4 +72,41 @@
         
 
     }
+}
+
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    #works {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .project-container{
+        flex-direction: row;
+        width: 100%;
+    }
+    .project-card {
+        width: calc(50% - 2rem);
+        /* width: 330px; */
+        height: auto;
+        
+    }
+
+    
+}
+
+@media (min-width: 1280px) {
+    #works {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .project-container{
+        flex-direction: row;
+        width: 80%;
+    }
+    .project-card {
+        width: calc(33% - 2rem);
+        height: auto;     
+    }
+
+    
 }

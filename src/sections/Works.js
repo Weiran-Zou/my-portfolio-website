@@ -86,7 +86,7 @@ function Project ({item}) {
     };
     
     return (
-        <Link to="..." className="card-link">
+        // <Link to="..." className="card-link">
        
             <motion.div 
                 
@@ -124,7 +124,7 @@ function Project ({item}) {
                     {/* <a href="#" class="btn btn-primary">Learn more</a> */}
                 </div>
             </motion.div>
-        </Link>
+        // </Link>
     )
 }
 
@@ -139,7 +139,7 @@ export default function Works() {
     }, [isInView])
 
     return (
-        <div id="works" class="container" >
+        <div id="works">
             <motion.div 
                 className="sectionHeading" 
                 ref={ref}
@@ -150,8 +150,8 @@ export default function Works() {
                 }}
                 initial = "hidden"
                 animate = {mainControl}>
-                <h1 className="sectionName" id="educationHeading">My Works</h1>
-                <div className="divider" ></div>
+                    <h1 className="sectionName" id="educationHeading">My Works</h1>
+                    <div className="divider" ></div>
             </motion.div>
             <motion.div 
                 ref={ref}

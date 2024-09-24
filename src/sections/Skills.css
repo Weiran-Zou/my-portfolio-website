@@ -1,0 +1,29 @@
+#skills {
+    padding: 2rem;
+}
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+   
+}
+.skills-item {
+    flex-basis: 45%;
+    text-align: center;
+
+    border-radius: 8px;
+}
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .skills-container{
+        flex-direction: row;
+    }
+    
+}

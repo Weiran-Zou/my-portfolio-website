@@ -25,11 +25,11 @@ export default function Skillcard(props) {
             variants={iconVariant(2.5)}
             initial="initial"
             animate="animate"
-            className='col-md-3' style={{ margin:"1rem 0",  alignItems:"center"}}>
-            <div id="skill-card">
-                <img src={props.src} style={{padding:"0 2rem", width:"8rem"}}></img>
-               
-            </div>  
+            id="skill-card"
+        >
+            
+            <img src={props.src} ></img>
+
         </motion.div >
     
     )

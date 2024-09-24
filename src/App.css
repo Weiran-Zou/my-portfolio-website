@@ -1,140 +1,47 @@
-
+html {
+  font-size: 14px;
+}
 .App {
   text-align: center;
   width: 100%;
   
 }
 
-
-
 #body { 
-  
   background-color:#0c0c1d; 
-  
+  overflow: hidden;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6; 
+}
+
+h1 {
+  font-size: 2rem; 
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 
 
-#home, #intro-about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  color: white;
-  font-size: 1.125rem;
-}
-#skills {
-
-  color: white;
-}
-#introText-home {
-  display: block;
-  text-align: left;
-  margin-right: 10%;
-}
-#introText-home p, #contactInfo p {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  padding-top: 2rem;
-}
-
-#home .typing {
-  color: white;
-  font-size: 3.5em;
-  font-weight: bold;
-  
-}
-
-#contact {
-  padding-bottom: 4rem;
-}
-
-#home img{
-  max-width: 100%;
-  height: auto;
-  
-}
-
-#contactForm {
-  text-align: left;
-  background-color: #292947;
-  font-size: 18px; 
-  align-items: center;
-  color: white;
-  padding: 3rem ;
-  
-}
-
-
-
-#myContact {
-  color:white;
-  margin-right: 3rem;
-  margin-bottom: 5rem;
-  
- 
-}
-
-#contactInfo {
-  color:white;
-  display: block;
-  padding-bottom:2rem;
-  text-align:left;
-  h2 {
-    color: #40e0d0;
-  }
-}
-
-
-/* .card-contact {
- 
- text-align: center;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 1rem 0; 
-  
- 
-}
-
-.card-text{
-  padding-left: 6rem;
-  text-align: left;
-} */
-.social-icon {
-  color: white
-}
-
-#social a {
-  border: none;
-  margin-right: 2rem;
-  
-}
-
-#intro-about {
-  padding-right: 4rem;
-}
-
-#intro-about img{
-  max-width: 40%;
-  max-height: 40%;
-  border-radius: 50%;
-
-}
-
-#intro-about h2, img, p, #skills h2 {
+#skills h2 {
   margin: 2rem 0;
 }
 
-#intro-about p {
-  text-align: left;
-}
 
 .sectionHeading {
+  width: 100%;
    display:flex;
    flex-direction:row;
    align-items: center;
- 
+
    padding-top: 14rem;
    padding-bottom: 2rem;
 }
@@ -142,7 +49,7 @@
 .sectionName {
   padding-right: 2rem;
   color: white;
-  font-size: 3rem;
+
 }
 
 .divider {
@@ -159,7 +66,46 @@
 }
 
 
-/* .project-container {
-  display: flex; flex-wrap: wrap;  flex: 0 0 30%;
-} */
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  p {
+    font-size: 1rem; 
+
+  }
+  h1 {
+    font-size: 2.25rem;  
+  }
+  h2 {
+    font-size: 2rem;  
+  }
+  h3 {
+    font-size: 1.75rem;  
+  }
  
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 2.75rem; 
+  }
+
+  h2 {
+    font-size: 2.5rem; 
+  }
+
+  h3 {
+    font-size: 2.25rem; 
+  }
+
+  p {
+    font-size: 1.125rem; 
+  }
+ 
+ 
+}

@@ -15,7 +15,7 @@ export default function Education() {
         }
     }, [isInView, mainControl])
     return (
-        <div id="education" class="container" >
+        <div id="education" style={{  padding: "2rem"}}>
             <motion.div 
                 className="sectionHeading" 
                 ref={ref}
@@ -32,7 +32,7 @@ export default function Education() {
             <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
-                    contentStyle={{ background: "#292947", color: 'white' , width:"45%" }}
+                    contentStyle={{ background: "#292947", color: 'white' }}
                     contentArrowStyle={{ borderRight: '7px solid #292947' }}
                     date="FEB 2022 - JULY 2023"
                     dateStyle = {{color:'white'}}
@@ -47,7 +47,7 @@ export default function Education() {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
-                    contentStyle={{ background: "#292947", color: 'white', width:"45%" }}
+                    contentStyle={{ background: "#292947", color: 'white'}}
                     contentArrowStyle={{ borderRight: '7px solid  #292947' }}
                     date="JUNE 2019 - JAN 2022"
                     dateClassName='education-date'

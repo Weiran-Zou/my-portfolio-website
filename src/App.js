@@ -1,4 +1,5 @@
-import NavBar from "./components/Navbar.js"
+// import NavBar from "./components/Navbar.js"
+import Header from "./components/Header.js"
 import Home from "./sections/Home.js"
 import Education from "./sections/Education.js"
 import Skills from "./sections/Skills.js"
@@ -14,7 +15,8 @@ function App() {
     
     <div id="body" >
       
-      <NavBar />  
+      {/* <NavBar />   */}
+      <Header />
       <Home />
       <Education /> 
       <Skills />

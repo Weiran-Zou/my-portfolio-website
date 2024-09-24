@@ -15,7 +15,7 @@ import androidStudio from '../imgs/icons8-android-studio.svg'
 import firebase from '../imgs/icons8-firebase.svg'
 import agile from '../imgs/icons8-agile-64.png'
 import jest from '../imgs/icons8-jest-96.png'
-
+import './Skills.css'
 
 export default function Skills() {
     const ref = useRef(null)
@@ -26,7 +26,7 @@ export default function Skills() {
             mainControl.start("show")
         }
     }, [isInView])
-    return <div id="skills" className="container text-center">
+    return <div id="skills">
        
             <motion.div 
                 className="sectionHeading" 
@@ -41,77 +41,45 @@ export default function Skills() {
                 <h1 className="sectionName" id="educationHeading">Skills Profile</h1>
                 <div className="divider" ></div>
             </motion.div>
-           
-                <div className="row gx-5">
-                    <div className="col">
-                        <h2 className=" row">Frontend SKills</h2>
-                        <div className="row">          
+                <div className="skills-container">
+                    <div className="skills-item"> 
+                        <h2 className="row">Frontend SKills</h2>
+                        <div className="skills-row">          
                             <Skillcard src={react} skillName="React" />
                             <Skillcard src={vue} skillName="Vue" />
                             <Skillcard src={javaScript} skillName="JavaScript" />
                             <Skillcard src={html} skillName="HTML" />
                             <Skillcard src={css} skillName="CSS" />
                         </div>
-                    </div>
-                    <div className="col">
+                    </div>    
+                    <div className="skills-item">
                         <h2 className="row">Backend Skills</h2>
-                        <div className="row">
+                        <div className="skills-row">
                             <Skillcard src={node} skillName="Node" />
                             <Skillcard src={express} skillName="Express" />
                             <Skillcard src={mySql} skillName="MySQL" />
                         </div>
                     </div>
-                
-               
-                </div>
-                <div className="row gx-5">
-                    {/* <div className="col">
-                        <h2 className=" row">Database</h2>
-                        <div className="row">
-                            <Skillcard src={mySql} skillName="MySQL" />
-                        </div>
-                    </div> */}
-                    <div className="col">
-                        <h2 className=" row">Mobile Skills</h2>
-                        <div className="row">
+                    <div className="skills-item"> 
+                        <h2 className="row">Mobile Skills</h2>
+                        <div className="skills-row">
                             <Skillcard src={java} skillName="Java" />
                             <Skillcard src={reactNative} skillName="React Native" />
                             <Skillcard src={androidStudio} skillName="Android Studio" />
                             <Skillcard src={firebase} skillName="Firebase" />
                         </div>
                     </div>
-                    <div className="col">
-                        <h2 className=" row">Tests</h2>
-                        <div className="row">
+                    <div className="skills-item"> 
+                        <h2 className="row">Tests</h2>
+                        <div className="skills-row">
                             <Skillcard src={jest} skillName="Jest" />
                             
                         </div>
                     </div>
                 </div>
-                {/* <div className="row gx-5">
-                    <div className="col">
-                        <h2 className=" row">Tests</h2>
-                        <div className="row">
-                            <Skillcard src={jest} skillName="Jest" />
-                            
-                        </div>
-                    </div>
-                    <div className="col">
-                        <  h2 className=" row">Tools</h2>
-                        <div className="row">
-                            <Skillcard src={agile} skillName="Agile" />
-                            
-                        </div>
-                    </div>
-                </div> */}
-                
-              
                 
                 
 
-
-            
-        {/* </div> */}
         </div>
         
 }

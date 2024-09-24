@@ -10,7 +10,7 @@ import './Navbar.css'
 export default function NavBar() {
     return (
         <nav id="nav">
-            <Link smooth={true} spy to="home" id="logo" duration={50}><img src={logo} ></img></Link>
+            
             <ul>
                 <li><Link smooth={true} spy={true} to="home" duration={50} activeClass="active">Home</Link></li>
                 <li><Link smooth={true} spy={true}  to="education" duration={50} activeClass="active" >Education</Link></li>
