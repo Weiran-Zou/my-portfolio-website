@@ -6,10 +6,8 @@
 .contanct-container{
     display: flex;
     flex-direction: column;
-    padding-bottom: 4rem;
     justify-content: center;
     align-items: center;
-
   }
   
 
@@ -65,7 +63,7 @@
     color:white;
     width: 95%;
     max-width: 600px;
-    margin-bottom: 5rem;
+  
     z-index: 1;
 }
 

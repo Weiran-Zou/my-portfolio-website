@@ -108,7 +108,7 @@ export default function Contact() {
         }
     }, [isInView])
     return (
-    <div id="contact">
+    <div id="contact" >
         <motion.div 
             className="sectionHeading" 
             ref={ref}
@@ -119,7 +119,7 @@ export default function Contact() {
             }}
             initial = "hidden"
             animate = {mainControl}>
-            <h1 className="sectionName" id="educationHeading">Contact Me</h1>
+            <h1 className="sectionName" >Contact Me</h1>
             <div className="divider" ></div>
         </motion.div>
       
@@ -128,7 +128,7 @@ export default function Contact() {
           <motion.div  
             id="myContact" 
           
-            ref={ref}
+            
             variants={{
                 hidden: {x:-200, opacity:0},
                 show: {x:0, opacity:1, transition:{duration: 0.5, delay: 0.5}

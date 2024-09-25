@@ -38,7 +38,7 @@ export default function Skills() {
                 }}
                 initial = "hidden"
                 animate = {mainControl}>
-                <h1 className="sectionName" id="educationHeading">Skills Profile</h1>
+                <h1 className="sectionName">Skills Profile</h1>
                 <div className="divider" ></div>
             </motion.div>
                 <div className="skills-container">

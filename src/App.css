@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 .App {
   text-align: center;
@@ -13,37 +13,36 @@ html {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1rem !important;
   line-height: 1.6; 
 }
 
 h1 {
-  font-size: 2rem; 
+  font-size: 2rem !important; 
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.75rem !important;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
+}
+
+h4 {
+  font-size: 1.25rem !important;
 }
 
 
-
-#skills h2 {
-  margin: 2rem 0;
-}
 
 
 .sectionHeading {
   width: 100%;
-   display:flex;
-   flex-direction:row;
-   align-items: center;
-
-   padding-top: 14rem;
-   padding-bottom: 2rem;
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  margin: 2rem 0;
+   
 }
 
 .sectionName {
@@ -68,31 +67,36 @@ h3 {
 
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+  
   p {
-    font-size: 1rem; 
+    font-size: 1.125rem !important; 
 
   }
   h1 {
-    font-size: 2.25rem;  
+    font-size: 2.25rem !important;  
   }
   h2 {
-    font-size: 2rem;  
+    font-size: 2rem !important;  
   }
   h3 {
-    font-size: 1.75rem;  
+    font-size: 1.75rem !important;  
   }
+  
+  h4 {
+    font-size: 1.5rem !important;
+  }
+  .sectionHeading {
+    margin: 4rem 0;
+     
+  }
+  
  
 }
 
 @media (min-width: 1200px) {
-  html {
-    font-size: 16px;
-  }
+ 
   h1 {
-    font-size: 2.75rem; 
+    font-size: 3rem; 
   }
 
   h2 {
@@ -100,12 +104,18 @@ h3 {
   }
 
   h3 {
-    font-size: 2.25rem; 
+    font-size: 2rem; 
   }
-
+  
+  h4 {
+    font-size: 1.75rem;
+  }
   p {
-    font-size: 1.125rem; 
+    font-size: 1.25rem; 
   }
- 
+  .sectionHeading {
+    margin: 8rem 0;
+     
+  }
  
 }

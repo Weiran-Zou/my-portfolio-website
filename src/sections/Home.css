@@ -7,8 +7,8 @@
     color: white;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 1rem;
-    gap: 1rem;
+    margin-top: 5rem;
+    gap: 2rem;
 }
 
 
@@ -24,11 +24,7 @@
 }
 #intro-descp{
     text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    margin: 1rem 0;
+    margin: 2rem 0;
     justify-content: center;
 }
 @media (max-width: 1200px) {
@@ -47,7 +43,7 @@
         
     }
     #intro-text {
-        width: calc(50% - 2rem);
+        width: calc(45% - 2rem);
     }
     #intro-type {
        
@@ -55,7 +51,7 @@
     }
      #intro-img{
       
-        width: calc(50% - 2rem);
+        width: calc(45% - 2rem);
     }
     .show-more {
         display: none;

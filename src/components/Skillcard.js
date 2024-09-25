@@ -33,11 +33,5 @@ export default function Skillcard(props) {
         </motion.div >
     
     )
-    // <div className=' col-md-4' style={{margin:"1rem 0"}}>
-    //     <div class="card" id="skill-card">
-    //             <FontAwesomeIcon icon={props.skillIcon} className='card-img-top' size="2x" style={{padding:"1rem 0"}}/>
-    //             <h5 card-title style={{padding:"1rem 0"}}>{props.skillName}</h5>
-    //         </div>
-    // </div> 
-    
+
 }

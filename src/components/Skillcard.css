@@ -12,7 +12,16 @@
       height: 70px
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
+   #skill-card img {
+      padding:1.5rem;
+      width:100px;
+      height: 100px
+   }
+   
+}
+
+@media (min-width: 1200px) {
    #skill-card img {
       padding:2rem;
       width:130px;
