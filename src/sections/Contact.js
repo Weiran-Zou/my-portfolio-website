@@ -72,8 +72,13 @@ export default function Contact() {
             </div>
             <div className="social-card-container">
               <div class="social-card-wrapper">
-                <FontAwesomeIcon icon={faLinkedin} size="2xl" className='social-icon'/>
-                <FontAwesomeIcon icon={faGithub} size="2xl" className='social-icon'/>
+                <a href="https://www.linkedin.com/in/weiran-zou-239b6419a/" aria-label="Linkedin">
+                  <FontAwesomeIcon icon={faLinkedin}  size="2xl" className='social-icon'/>
+                </a>
+                <a href="https://github.com/Weiran-Zou" aria-label="Github" className='social-icon'>
+                  <FontAwesomeIcon icon={faGithub} size="2xl" className='social-icon'/>
+                </a>
+                
               </div>    
             </div>
             
