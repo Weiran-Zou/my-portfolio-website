@@ -8,7 +8,7 @@ import React from "react";
 import { useRef, useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import "./Project.css"
-
+import MyModal from "../components/MyModal";
 
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
@@ -62,6 +62,27 @@ const Project = ({item}) => {
     return (
         // <Link to="..." className="card-link">
         <>
+            <MyModal
+                show={isModalOpen}
+                onCancel={closeModal}
+                header={item.title}
+                className="project-details-modal"
+              
+            >
+               
+                <img src={item.img}  alt="..." />
+                <div className="card-body" >
+                    <ul className="techList">
+                        { item.tech.map(tech =>
+                            <li>{tech}</li>
+                        )}
+                        
+                    </ul>
+                    <p className="card-text">{item.description}</p>
+                </div>
+                
+               
+            </MyModal>
             <motion.div 
                 
                 className="project-card"
@@ -81,8 +102,8 @@ const Project = ({item}) => {
                 }}
                 >
                 <img src={item.img}  alt="..." style={{
-                transform: "translateZ(75px)",
-                transformStyle: "preserve-3d",
+                    transform: "translateZ(75px)",
+                    transformStyle: "preserve-3d",
                 }}/>
                 <div className="card-body"  style={{
                     transform: "translateZ(50px)",
@@ -95,7 +116,7 @@ const Project = ({item}) => {
                         
                     </ul>
                     <p className="card-text">{item.description}</p>
-                    <button type="button" class="btn btn-primary" onClick={() => {}}>Show More</button>
+                    <button type="button" class="btn btn-primary" onClick={openModal}>Show More</button>
                 </div>
             </motion.div>
         </>
