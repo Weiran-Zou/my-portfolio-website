@@ -1,4 +1,5 @@
 .project-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -7,10 +8,12 @@
     border-radius: 15px;
     margin: 0.5rem;
     width: calc(100% - 1rem);
-    height: 490px;
+    height: 450px;
     max-width: 330px;
     overflow: hidden;
     padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
     img {
         
         width: 100%;
@@ -48,12 +51,7 @@
         overflow: hidden;
         display: -webkit-box;
     }
-    .project-btn {
-        /* background-color: #FF3CAC;
-        background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%); */
-        
 
-    }
 }
 
 .project-details-modal {
@@ -85,6 +83,51 @@
     }
 }
 
+.overlay {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(100, 100, 180, 0.75), rgba(30, 30, 60, 0.75));;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out ;
+    
+    flex-direction: column;
+}
+
+.overlay button {
+    position: absolute;
+    bottom: 30%;
+    padding: 10px 20px; 
+    background-color: #268077;
+    font-weight: bold;
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card:hover .overlay {
+    /* height: 100%; */
+    opacity: 1;
+}
+
+.overlay button:hover {
+    background-color: #2ab1a5
+}
+
+
 
 @media (min-width: 768px) and (max-width: 1199px) {
     .project-card {
@@ -93,7 +136,7 @@
     }
     .project-details-modal {
         img {
-            height: 3500px;
+            height: 350px;
             max-height: 35vh; 
         }
     }
@@ -103,7 +146,7 @@
 
     .project-card {
         width: calc(33% - 2rem);
-        height: 600px;    
+        height: auto;    
         .card-text {
             -webkit-line-clamp: 4;
     
