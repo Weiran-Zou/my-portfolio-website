@@ -48,7 +48,7 @@ const projects = [
 
 
 
-export default function Works() {
+export default function Projects() {
     const ref = useRef(null)
     const isInView = useInView(ref, {once: true})
     const mainControl = useAnimation();
@@ -59,7 +59,7 @@ export default function Works() {
     }, [isInView])
 
     return (
-        <div id="works">
+        <div id="projects">
             <motion.div 
                 className="sectionHeading" 
                 ref={ref}
@@ -70,7 +70,7 @@ export default function Works() {
                 }}
                 initial = "hidden"
                 animate = {mainControl}>
-                    <h1 className="sectionName">My Works</h1>
+                    <h1 className="sectionName">My Projects</h1>
                     <div className="divider" ></div>
             </motion.div>
             <motion.div 
