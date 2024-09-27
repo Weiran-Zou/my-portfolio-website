@@ -12,7 +12,7 @@
 }
 
 #nav a {
-    color: black;
+    color: white;
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
@@ -41,9 +41,6 @@
     }
     #nav ul {
         flex-direction: row;
-    }
-    #nav a{
-        color: white;
     }
     #nav a:hover{
         color: #40E0D0;
