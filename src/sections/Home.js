@@ -1,10 +1,10 @@
 import '../App.css'
 import { TypeAnimation } from 'react-type-animation';
-import profile from '../imgs/programmer2.jpeg'
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import "./Home.css"
+import { SectionRefsContext } from '../Context/SectionRefsContext';
 
 import {
   useMotionTemplate,
@@ -16,9 +16,10 @@ import {
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
 export default function Home() {
+    const sectionRefs = useContext(SectionRefsContext);
     const color = useMotionValue(COLORS_TOP[0]);
-
     const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
+
     useEffect(() => {
         animate(color, COLORS_TOP, {
           ease: "easeInOut",
@@ -28,8 +29,9 @@ export default function Home() {
         });
       }, []);
     return (
-        <motion.div 
-            id="home"  
+        <motion.section
+            id="home" 
+            ref={el => sectionRefs.current.push(el)}
             style={{
                 backgroundImage,
                 width: "100%",
@@ -84,6 +86,6 @@ export default function Home() {
                     <Stars radius={50} count={2500} factor={4} fade speed={2} />
                 </Canvas>
             </div>
-        </motion.div>
+        </motion.section>
     )
 }

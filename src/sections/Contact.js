@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useContext } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
@@ -12,6 +12,8 @@ import emailjs from '@emailjs/browser';
 import './Contact.css'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { SectionRefsContext } from '../Context/SectionRefsContext';
+
 const validate = values => {
   const errors = {};
   if (!values.name) {
@@ -40,6 +42,7 @@ const validate = values => {
 };
 
 export default function Contact() {
+  const sectionRefs = useContext(SectionRefsContext);
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -92,7 +95,7 @@ export default function Contact() {
             draggable: true,
             progress: undefined,
             theme: "light",
-            // transition: Bounce,
+            transition: Bounce,
           });
           actions.setSubmitting(false);
         },
@@ -108,169 +111,171 @@ export default function Contact() {
         }
     }, [isInView])
     return (
-    <div id="contact" >
-        <motion.div 
-            className="sectionHeading" 
-            ref={ref}
-            variants={{
-                hidden: {y:200, opacity:0},
-                show: {y:0, opacity:1, transition:{duration: 0.5, delay: 0.2}
-                }
-            }}
-            initial = "hidden"
-            animate = {mainControl}>
-            <h1 className="sectionName" >Contact Me</h1>
-            <div className="divider" ></div>
-        </motion.div>
-      
-          {/* Same as */}
-        <div className="contanct-container">
-          <motion.div  
-            id="myContact" 
-          
+      <section 
+        id="contact" 
+        ref={el => sectionRefs.current.push(el)}>
+          <motion.div 
+              className="sectionHeading" 
+              ref={ref}
+              variants={{
+                  hidden: {y:200, opacity:0},
+                  show: {y:0, opacity:1, transition:{duration: 0.5, delay: 0.2}
+                  }
+              }}
+              initial = "hidden"
+              animate = {mainControl}>
+              <h1 className="sectionName" >Contact Me</h1>
+              <div className="divider" ></div>
+          </motion.div>
+        
+            {/* Same as */}
+          <div className="contanct-container">
+            <motion.div  
+              id="myContact" 
             
-            variants={{
-                hidden: {x:-200, opacity:0},
-                show: {x:0, opacity:1, transition:{duration: 0.5, delay: 0.5}
-                }
-            }}
-            initial = "hidden"
-            animate = {mainControl}>
               
-           
-            <div id='contactInfo'>
-              <h2>Let's Get in Touch</h2>
-              <p>If you are interested in any of my works or are passionate about innovative digital solutions, please contact me...</p>
-            </div>
-            <div className="social-card-container">
-              <div class="social-card-wrapper">
-                <FontAwesomeIcon icon={faEnvelope} size="xl" className='social-icon'/>
-                <span class="social-card-text">zouweiran9122@gamil.com</span>
-              </div>
-            </div>
-            <div className="social-card-container">
-              <div class="social-card-wrapper">
-                <FontAwesomeIcon icon={faLocationDot} size="xl" className='social-icon'/>
-                <span class="social-card-text">Malvern, VIC, Australia</span>
-              </div>
-            </div>
-            <div className="social-card-container">
-              <div class="social-card-wrapper">
-                <FontAwesomeIcon icon={faPhone} size="xl" className='social-icon'/>
-                <span class="social-card-text">+61 433 965 706</span>
-              </div>
-            </div>
-            <div className="social-card-container">
-              <div class="social-card-wrapper">
-                <a href="https://www.linkedin.com/in/weiran-zou-239b6419a/" aria-label="Linkedin">
-                  <FontAwesomeIcon icon={faLinkedin}  size="2xl" className='social-icon'/>
-                </a>
-                <a href="https://github.com/Weiran-Zou" aria-label="Github" className='social-icon'>
-                  <FontAwesomeIcon icon={faGithub} size="2xl" className='social-icon'/>
-                </a>
+              variants={{
+                  hidden: {x:-200, opacity:0},
+                  show: {x:0, opacity:1, transition:{duration: 0.5, delay: 0.5}
+                  }
+              }}
+              initial = "hidden"
+              animate = {mainControl}>
                 
-              </div>    
-            </div>
             
-  
-          </motion.div>
-          
-           <motion.div 
-            id="contactForm-container"
-            ref={ref}
-            variants={{
-                hidden: {x:200, opacity:0},
-                show: {x:0, opacity:1, transition:{duration: 0.5, delay: 0.5}
-                }
-            }}
-            initial = "hidden"
-            animate = {mainControl}>
-              <form 
-                id="contactForm" 
-                onSubmit={formik.handleSubmit}
-                >                 
-                <div class="mb-4" >
-                  <label htmlFor="name" class="form-label">Your Name</label>
-                  <input 
-                    type="text" 
-                    name="name"
-                    class="form-control border-0"  
-                    style={{backgroundColor:"#0c0c1d", color:"white"}}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.name}
-                    />
-                  {formik.touched.name && formik.errors.name ? (
-                    <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.name}</div>
-                  ) : null}
+              <div id='contactInfo'>
+                <h2>Let's Get in Touch</h2>
+                <p>If you are interested in any of my works or are passionate about innovative digital solutions, please contact me...</p>
+              </div>
+              <div className="social-card-container">
+                <div class="social-card-wrapper">
+                  <FontAwesomeIcon icon={faEnvelope} size="xl" className='social-icon'/>
+                  <span class="social-card-text">zouweiran9122@gamil.com</span>
                 </div>
-                <div class="mb-4">
-                  <label htmlFor="email" class="form-label">Your Email address</label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    class="form-control border-0"  
-                    style={{backgroundColor:"#0c0c1d", color:"white"}}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.email}
-                    />   
-                  {formik.touched.email && formik.errors.email ? (
-                    <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.email}</div>
-                  ) : null} 
-                </div>      
-                <div class="mb-4">
-                  <label htmlFor="subject" class="form-label">Subject</label>
-                  <input 
-                    type="text" 
-                    name="subject"
-                    class="form-control border-0" 
-                    style={{backgroundColor:"#0c0c1d", color:"white"}}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.subject}
-                    />    
-                  {formik.touched.subject && formik.errors.subject ? (
-                    <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.subject}</div>
-                  ) : null} 
-                </div> 
-                <div class="mb-4">
-                  <label htmlFor="message" class="form-label">Message</label>
-                  <textarea 
-                    type="text" 
-                    name="message"
-                    class="form-control border-0" 
-                    style={{height: "230px",backgroundColor:"#0c0c1d", color:"white"}} 
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.message}
-                  />
-                  {formik.touched.message && formik.errors.message? (
-                    <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.message}</div>
-                  ) : null} 
+              </div>
+              <div className="social-card-container">
+                <div class="social-card-wrapper">
+                  <FontAwesomeIcon icon={faLocationDot} size="xl" className='social-icon'/>
+                  <span class="social-card-text">Malvern, VIC, Australia</span>
                 </div>
-                <div class="mb-4 text-center" style={{marginTop:"2rem"}}>
-                  <button type="submit" class="btn btn-primary" style={{fontWeight:"bold", width:"100%", fontSize: "20px", padding:"1rem 0", backgroundColor:"#268077", border:"none"}}>Send</button>
-                  <ToastContainer
-                    position="bottom-center"
-                    autoClose={5000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    theme="light"
-                    transition= {Bounce}
-                  />
+              </div>
+              <div className="social-card-container">
+                <div class="social-card-wrapper">
+                  <FontAwesomeIcon icon={faPhone} size="xl" className='social-icon'/>
+                  <span class="social-card-text">+61 433 965 706</span>
+                </div>
+              </div>
+              <div className="social-card-container">
+                <div class="social-card-wrapper">
+                  <a href="https://www.linkedin.com/in/weiran-zou-239b6419a/" aria-label="Linkedin">
+                    <FontAwesomeIcon icon={faLinkedin}  size="2xl" className='social-icon'/>
+                  </a>
+                  <a href="https://github.com/Weiran-Zou" aria-label="Github" className='social-icon'>
+                    <FontAwesomeIcon icon={faGithub} size="2xl" className='social-icon'/>
+                  </a>
+                  
                 </div>    
-              </form>
-          </motion.div>
-        </div>  
-            
-        </div>
+              </div>
+              
     
+            </motion.div>
+            
+            <motion.div 
+              id="contactForm-container"
+              ref={ref}
+              variants={{
+                  hidden: {x:200, opacity:0},
+                  show: {x:0, opacity:1, transition:{duration: 0.5, delay: 0.5}
+                  }
+              }}
+              initial = "hidden"
+              animate = {mainControl}>
+                <form 
+                  id="contactForm" 
+                  onSubmit={formik.handleSubmit}
+                  >                 
+                  <div class="mb-4" >
+                    <label htmlFor="name" class="form-label">Your Name</label>
+                    <input 
+                      type="text" 
+                      name="name"
+                      class="form-control border-0"  
+                      style={{backgroundColor:"#0c0c1d", color:"white"}}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.name}
+                      />
+                    {formik.touched.name && formik.errors.name ? (
+                      <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.name}</div>
+                    ) : null}
+                  </div>
+                  <div class="mb-4">
+                    <label htmlFor="email" class="form-label">Your Email address</label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      class="form-control border-0"  
+                      style={{backgroundColor:"#0c0c1d", color:"white"}}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.email}
+                      />   
+                    {formik.touched.email && formik.errors.email ? (
+                      <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.email}</div>
+                    ) : null} 
+                  </div>      
+                  <div class="mb-4">
+                    <label htmlFor="subject" class="form-label">Subject</label>
+                    <input 
+                      type="text" 
+                      name="subject"
+                      class="form-control border-0" 
+                      style={{backgroundColor:"#0c0c1d", color:"white"}}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.subject}
+                      />    
+                    {formik.touched.subject && formik.errors.subject ? (
+                      <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.subject}</div>
+                    ) : null} 
+                  </div> 
+                  <div class="mb-4">
+                    <label htmlFor="message" class="form-label">Message</label>
+                    <textarea 
+                      type="text" 
+                      name="message"
+                      class="form-control border-0" 
+                      style={{height: "230px",backgroundColor:"#0c0c1d", color:"white"}} 
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.message}
+                    />
+                    {formik.touched.message && formik.errors.message? (
+                      <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.message}</div>
+                    ) : null} 
+                  </div>
+                  <div class="mb-4 text-center" style={{marginTop:"2rem"}}>
+                    <button type="submit" class="btn btn-primary" style={{fontWeight:"bold", width:"100%", fontSize: "20px", padding:"1rem 0", backgroundColor:"#268077", border:"none"}}>Send</button>
+                    <ToastContainer
+                      position="bottom-center"
+                      autoClose={5000}
+                      hideProgressBar={false}
+                      newestOnTop={false}
+                      closeOnClick
+                      rtl={false}
+                      pauseOnFocusLoss
+                      draggable
+                      pauseOnHover
+                      theme="light"
+                      transition= {Bounce}
+                    />
+                  </div>    
+                </form>
+            </motion.div>
+          </div>  
+              
+        </section>
+  
     
     
     )

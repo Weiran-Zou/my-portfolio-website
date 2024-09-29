@@ -1,5 +1,5 @@
 import Skillcard from "../components/Skillcard"
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useContext } from "react"
 import { motion, useInView, useAnimation } from "framer-motion"
 import express from '../imgs/icons8-express-js.svg'
 import node from '../imgs/icons8-nodejs.svg'
@@ -13,11 +13,12 @@ import java from '../imgs/icons8-java.svg'
 import reactNative from '../imgs/icons8-react-native.svg'
 import androidStudio from '../imgs/icons8-android-studio.svg'
 import firebase from '../imgs/icons8-firebase.svg'
-import agile from '../imgs/icons8-agile-64.png'
 import jest from '../imgs/icons8-jest-96.png'
 import './Skills.css'
+import { SectionRefsContext } from '../Context/SectionRefsContext';
 
 export default function Skills() {
+    const sectionRefs = useContext(SectionRefsContext);
     const ref = useRef(null)
     const isInView = useInView(ref, {once: true})
     const mainControl = useAnimation();
@@ -26,8 +27,11 @@ export default function Skills() {
             mainControl.start("show")
         }
     }, [isInView])
-    return <div id="skills">
-       
+    return (
+        <section
+            id="skills" 
+            ref={el => sectionRefs.current.push(el)}
+        >
             <motion.div 
                 className="sectionHeading" 
                 ref={ref}
@@ -80,6 +84,7 @@ export default function Skills() {
                 
                 
 
-        </div>
+        </section>
+    )
         
 }

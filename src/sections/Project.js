@@ -1,14 +1,6 @@
-
-import React from "react";
-import { useRef, useEffect, useState } from "react"
-import { Link } from "react-router-dom";
+import React, {useState} from "react";
 import "./Project.css"
 import MyModal from "../components/MyModal";
-
-const ROTATION_RANGE = 32.5;
-const HALF_ROTATION_RANGE = 32.5 / 2;
-
-
 
 const Project = ({item}) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +16,6 @@ const Project = ({item}) => {
     }
     
     return (
-        // <Link to="..." className="card-link">
         <>
             <MyModal
                 show={isModalOpen}
@@ -64,7 +55,6 @@ const Project = ({item}) => {
                 </div>
             </div>
         </>
-        // </Link>
        
     )
 }

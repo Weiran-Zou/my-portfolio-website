@@ -20,17 +20,16 @@
     cursor:pointer
 }
 
-#nav a:hover{
-    color: #30B2B0;
-}
-
-#nav a:active {
-    color: #30B2B0;
-}
-
-#nav .active {
+/* Active link style */
+#nav ul li a.active {
     color: #30B2B0;
     text-decoration: underline;
+  }
+  
+  /* Hover effect for links */
+  #nav ul li a:hover {
+    color: #30B2B0;
+   
 }
 
 @media (min-width: 768px) {
@@ -42,15 +41,5 @@
     #nav ul {
         flex-direction: row;
     }
-    #nav a:hover{
-        color: #40E0D0;
-    }
-    
-    #nav a:active {
-        color: #40E0D0;
-    }
-    
-    #nav .active {
-        color: #40E0D0;
-    }
+
 }

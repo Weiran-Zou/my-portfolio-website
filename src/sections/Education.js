@@ -1,13 +1,14 @@
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useContext } from "react"
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import unimelbLogo from '../imgs/unimelb-logo.jpg'
 import qutLogo from "../imgs/qut-logo.png"
-import SchoolIcon from '@mui/icons-material/School';
 import { motion, useInView, useAnimation } from "framer-motion"
 import "./Education.css"
+import { SectionRefsContext } from '../Context/SectionRefsContext';
 
 export default function Education() {
+    const sectionRefs = useContext(SectionRefsContext);
     const ref = useRef(null)
     const isInView = useInView(ref, {once: true})
     const mainControl = useAnimation();
@@ -17,7 +18,9 @@ export default function Education() {
         }
     }, [isInView, mainControl])
     return (
-        <div id="education" style={{  padding: "2rem"}}>
+        <section
+            id="education" 
+            ref={el => sectionRefs.current.push(el)}>
             <motion.div 
                 className="sectionHeading" 
                 ref={ref}
@@ -75,6 +78,6 @@ export default function Education() {
                 </VerticalTimelineElement>
         
             </VerticalTimeline>
-        </div>
+        </section>
     )
 }

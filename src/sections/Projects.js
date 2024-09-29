@@ -4,16 +4,14 @@ import {
     useAnimation,
 
 } from "framer-motion"
-import * as React from "react";
-import { Link } from "react-router-dom";
 import virtualDoctorImg from '../imgs/Virtual-doctor-book-appointment.png'
 import foodiesImg from "../imgs/Foodies.png"
 import discountAppImg from "../imgs/Discount-Application-resized.png"
 import stockImg from "../imgs/Stocks-Application-1.PNG"
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useContext } from "react"
 import "./Projects.css"
 import Project from "./Project";
-
+import { SectionRefsContext } from '../Context/SectionRefsContext';
 
 const projects = [
     {
@@ -46,9 +44,8 @@ const projects = [
     }
 ]
 
-
-
 export default function Projects() {
+    const sectionRefs = useContext(SectionRefsContext);
     const ref = useRef(null)
     const isInView = useInView(ref, {once: true})
     const mainControl = useAnimation();
@@ -59,7 +56,10 @@ export default function Projects() {
     }, [isInView])
 
     return (
-        <div id="projects">
+        <section 
+            id="projects" 
+            ref={el => sectionRefs.current.push(el)}
+        >
             <motion.div 
                 className="sectionHeading" 
                 ref={ref}
@@ -93,10 +93,7 @@ export default function Projects() {
                 ))}
             </motion.div>
            
-           
-           
-
-        </div>
+        </section>
 
         
     )
