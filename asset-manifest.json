@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/my-portfolio-website/static/css/main.11dca4bd.css",
-    "main.js": "/my-portfolio-website/static/js/main.1652415f.js",
-    "static/js/453.9415623e.chunk.js": "/my-portfolio-website/static/js/453.9415623e.chunk.js",
+    "main.css": "/my-portfolio-website/static/css/main.3ec7a8e6.css",
+    "main.js": "/my-portfolio-website/static/js/main.e6a37868.js",
+    "static/js/453.bb257cf5.chunk.js": "/my-portfolio-website/static/js/453.bb257cf5.chunk.js",
     "static/media/Foodies.png": "/my-portfolio-website/static/media/Foodies.25dbde031543822528c3.png",
-    "static/media/programmer2.jpeg": "/my-portfolio-website/static/media/programmer2.d2c515e2c82a1ee89d1f.jpeg",
     "static/media/Discount-Application-resized.png": "/my-portfolio-website/static/media/Discount-Application-resized.60fd162b767483c686d5.png",
     "static/media/Stocks-Application-1.PNG": "/my-portfolio-website/static/media/Stocks-Application-1.f32b24bb5a11960ac0c4.PNG",
     "static/media/unimelb-logo.jpg": "/my-portfolio-website/static/media/unimelb-logo.21b405c771043a126107.jpg",
@@ -23,12 +22,12 @@
     "static/media/icons8-css.svg": "/my-portfolio-website/static/media/icons8-css.db7dfd1247623e1e9223d8ef28a37432.svg",
     "static/media/icons8-html.svg": "/my-portfolio-website/static/media/icons8-html.a026abbb678246d70ee9b70e4aee972c.svg",
     "static/media/icons8-vue-js.svg": "/my-portfolio-website/static/media/icons8-vue-js.6d7684efd638278d1af0d12e903b4e18.svg",
-    "main.11dca4bd.css.map": "/my-portfolio-website/static/css/main.11dca4bd.css.map",
-    "main.1652415f.js.map": "/my-portfolio-website/static/js/main.1652415f.js.map",
-    "453.9415623e.chunk.js.map": "/my-portfolio-website/static/js/453.9415623e.chunk.js.map"
+    "main.3ec7a8e6.css.map": "/my-portfolio-website/static/css/main.3ec7a8e6.css.map",
+    "main.e6a37868.js.map": "/my-portfolio-website/static/js/main.e6a37868.js.map",
+    "453.bb257cf5.chunk.js.map": "/my-portfolio-website/static/js/453.bb257cf5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.11dca4bd.css",
-    "static/js/main.1652415f.js"
+    "static/css/main.3ec7a8e6.css",
+    "static/js/main.e6a37868.js"
   ]
 }
