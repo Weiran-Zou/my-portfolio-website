@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./Project.css"
 import MyModal from "../components/MyModal";
+import { motion } from "framer-motion"
 
 const Project = ({item}) => {
     const [isModalOpen, setIsModalOpen] = useState(false);

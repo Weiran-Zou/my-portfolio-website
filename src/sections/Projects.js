@@ -18,7 +18,7 @@ const projects = [
         id: "1",
         title: "Validitron Virtual Doctor",
         description: "A group project of five members to extend the functionalities of an existing web-based telehealth platform and implement architectural changes to accommodate a Fast Healthcare Interoperability Resources (FHIR) server for the Validitron.",
-        tech: ["Vue.js", "JavaScript", "HTML", "CSS", "Agile methodology", "GitHub", "Confluence"],
+        tech: ["Vue.js", "JavaScript", "HTML", "CSS", "Agile methodology", "GitHub"],
         img: virtualDoctorImg
     },
     {
@@ -39,7 +39,7 @@ const projects = [
         id: "2",
         title: "Stock Analytics Website",
         description: "A web development project to develop a React-based web application for stock analysis, and create an Express application and a MySQL database that replicates the services provided by the API as documented in the Swagger.",
-        tech: ["React", "JavaScript", "RESTful APIs", "Node.js", "Express.js", "MYSQL", "Swagger", "Knex", "helmet", "morgan", "JWT"],
+        tech: ["React", "JavaScript", "RESTful APIs", "Node.js", "Express.js"],
         img: stockImg
     }
 ]
@@ -75,7 +75,7 @@ export default function Projects() {
             </motion.div>
             <motion.div 
                 ref={ref}
-                className="project-container"
+                className="projects-container"
                 variants={{
                     hidden: {opacity: 0},
                     show: {opacity: 1,
@@ -89,7 +89,16 @@ export default function Projects() {
                 animate = {mainControl}
                 >
                 {projects.map(item => (
-                    <Project item={item} key={item.id}/>
+                     <motion.div
+                        className="project-wrapper"
+                        key={item.id}
+                        variants={{
+                        hidden: { opacity: 0, y: 20 }, 
+                        show: { opacity: 1, y: 0 }, 
+                        }}
+                    >
+                        <Project item={item} key={item.id}/>
+                    </motion.div>
                 ))}
             </motion.div>
            
