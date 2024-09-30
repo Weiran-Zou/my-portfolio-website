@@ -61,17 +61,14 @@ export default function Projects() {
             ref={el => sectionRefs.current.push(el)}
         >
             <motion.div 
-                className="sectionHeading" 
-                ref={ref}
-                variants={{
-                    hidden: {y:200, opacity:0},
-                    show: {y:0, opacity:1, transition:{duration: 0.5, delay: 0.5}
-                    }
-                }}
-                initial = "hidden"
-                animate = {mainControl}>
-                    <h1 className="sectionName">My Projects</h1>
-                    <div className="divider" ></div>
+              className="sectionHeading" 
+              initial={{y:200, opacity:0}}
+              whileInView={{y:0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{duration: 0.5, delay: 0.2}}
+            >
+                <h1 className="sectionName">My Projects</h1>
+                <div className="divider" ></div>
             </motion.div>
             <motion.div 
                 ref={ref}
@@ -87,14 +84,14 @@ export default function Projects() {
                 }}
                 initial = "hidden"
                 animate = {mainControl}
-                >
+            >
                 {projects.map(item => (
                      <motion.div
                         className="project-wrapper"
                         key={item.id}
                         variants={{
-                        hidden: { opacity: 0, y: 20 }, 
-                        show: { opacity: 1, y: 0 }, 
+                            hidden: { opacity: 0, y: 20 }, 
+                            show: { opacity: 1, y: 0 }, 
                         }}
                     >
                         <Project item={item} key={item.id}/>

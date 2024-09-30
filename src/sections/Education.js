@@ -9,28 +9,17 @@ import { SectionRefsContext } from '../Context/SectionRefsContext';
 
 export default function Education() {
     const sectionRefs = useContext(SectionRefsContext);
-    const ref = useRef(null)
-    const isInView = useInView(ref, {once: true})
-    const mainControl = useAnimation();
-    useEffect(() => {
-        if(isInView) {
-            mainControl.start("show")
-        }
-    }, [isInView, mainControl])
     return (
         <section
             id="education" 
             ref={el => sectionRefs.current.push(el)}>
             <motion.div 
-                className="sectionHeading" 
-                ref={ref}
-                variants={{
-                    hidden: {y:200, opacity:0},
-                    show: {y:0, opacity:1, transition:{duration: 0.5, delay: 0.5}
-                    }
-                }}
-                initial = "hidden"
-                animate = {mainControl}>
+              className="sectionHeading" 
+              initial={{y:200, opacity:0}}
+              whileInView={{y:0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{duration: 0.5, delay: 0.2}}
+            >
                 <h1 className="sectionName">Education</h1>
                 <div className="divider" ></div>
             </motion.div>

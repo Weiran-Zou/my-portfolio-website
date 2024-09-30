@@ -1,5 +1,5 @@
-import { useRef, useEffect, useContext } from "react"
-import { motion, useInView, useAnimation } from "framer-motion"
+import { useContext } from "react"
+import { motion } from "framer-motion"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import {faFacebook} from '@fortawesome/free-brands-svg-icons'
@@ -102,28 +102,17 @@ export default function Contact() {
       );
     },
   });
-    const ref = useRef(null)
-    const isInView = useInView(ref, {once: true})
-    const mainControl = useAnimation();
-    useEffect(() => {
-        if(isInView) {
-            mainControl.start("show")
-        }
-    }, [isInView])
     return (
       <section 
         id="contact" 
         ref={el => sectionRefs.current.push(el)}>
           <motion.div 
               className="sectionHeading" 
-              ref={ref}
-              variants={{
-                  hidden: {y:200, opacity:0},
-                  show: {y:0, opacity:1, transition:{duration: 0.5, delay: 0.2}
-                  }
-              }}
-              initial = "hidden"
-              animate = {mainControl}>
+              initial={{y:200, opacity:0}}
+              whileInView={{y:0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{duration: 0.5, delay: 0.2}}
+            >
               <h1 className="sectionName" >Contact Me</h1>
               <div className="divider" ></div>
           </motion.div>
@@ -132,17 +121,11 @@ export default function Contact() {
           <div className="contanct-container">
             <motion.div  
               id="myContact" 
-            
-              
-              variants={{
-                  hidden: {x:-200, opacity:0},
-                  show: {x:0, opacity:1, transition:{duration: 0.5, delay: 0.5}
-                  }
-              }}
-              initial = "hidden"
-              animate = {mainControl}>
-                
-            
+              initial={{x:-100, opacity:0}}
+              whileInView={{x:0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{duration: 0.5, delay: 0.5}}
+            >
               <div id='contactInfo'>
                 <h2>Let's Get in Touch</h2>
                 <p>If you are interested in any of my works or are passionate about innovative digital solutions, please contact me...</p>
@@ -182,14 +165,11 @@ export default function Contact() {
             
             <motion.div 
               id="contactForm-container"
-              ref={ref}
-              variants={{
-                  hidden: {x:200, opacity:0},
-                  show: {x:0, opacity:1, transition:{duration: 0.5, delay: 0.5}
-                  }
-              }}
-              initial = "hidden"
-              animate = {mainControl}>
+              initial={{x:100, opacity:0}}
+              whileInView={{x:0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{duration: 0.5, delay: 0.5}}
+            >
                 <form 
                   id="contactForm" 
                   onSubmit={formik.handleSubmit}

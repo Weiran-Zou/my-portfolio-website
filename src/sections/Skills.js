@@ -19,14 +19,6 @@ import { SectionRefsContext } from '../Context/SectionRefsContext';
 
 export default function Skills() {
     const sectionRefs = useContext(SectionRefsContext);
-    const ref = useRef(null)
-    const isInView = useInView(ref, {once: true})
-    const mainControl = useAnimation();
-    useEffect(() => {
-        if(isInView) {
-            mainControl.start("show")
-        }
-    }, [isInView])
     return (
         <section
             id="skills" 
@@ -34,14 +26,11 @@ export default function Skills() {
         >
             <motion.div 
                 className="sectionHeading" 
-                ref={ref}
-                variants={{
-                    hidden: {y:200, opacity:0},
-                    show: {y:0, opacity:1, transition:{duration: 0.5, delay: 0.5}
-                    }
-                }}
-                initial = "hidden"
-                animate = {mainControl}>
+                initial={{y:200, opacity:0}}
+                whileInView={{y:0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{duration: 0.5, delay: 0.2}}
+            >
                 <h1 className="sectionName">Skills Profile</h1>
                 <div className="divider" ></div>
             </motion.div>

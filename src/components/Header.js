@@ -29,7 +29,7 @@ const Header = () => {
                     <span />
                     <span />
                 </button>
-                <Link smooth={true} spy to="home" id="logo" duration={50}><img src={logo} ></img></Link>
+                <a href="#home" id="logo" ><img src={logo} ></img></a>
                 <div className="main-nav">
                     <NavBar/>
                 </div>
