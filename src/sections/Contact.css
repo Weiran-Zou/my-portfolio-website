@@ -2,39 +2,24 @@
     padding: 2rem 2rem;
     z-index: 1;
 }
-.contanct-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-  
 
-#contactInfo p {
-    line-height: 1.75rem;
-    padding-top: 2rem;
-  }
-  
-#contactForm-container{
+#myContact {
+    color:white;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    
-}  
-  
-  
-#contactForm {
-    text-align: left;
-    background-color: #292947;
-    width: 95%;
-    max-width: 600px;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 1rem ;
+    max-width: 600px; 
     z-index: 1;
-
+}
+#contactInfo {
+    color:white;
+    padding-bottom:2rem;
+    text-align:left;
+    h2 {
+        color: #40e0d0;
+    }
+    p {
+        line-height: 1.75rem;
+        padding-top: 2rem;
+      }
 }
 
 .social-card-container {
@@ -44,7 +29,8 @@
     align-items: center;
     background-color:#292947;
     gap: 2rem;
-    margin: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
 }
 .social-card-wrapper {
     display: flex;
@@ -52,28 +38,10 @@
     align-items: center;
     background-color:#292947;
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
     gap: 1rem;
     width: 100%;
-}
-
-
-
-#myContact {
-    color:white;
-    width: 100%;
-    max-width: 600px;
-  
-    z-index: 1;
-}
-
-#contactInfo {
-    color:white;
-    padding-bottom:2rem;
-    text-align:left;
-    h2 {
-        color: #40e0d0;
-    }
+    border-radius: 10px;
 }
 
 .social-icon {
@@ -85,7 +53,33 @@
     margin-right: 2rem;
 
 }
+.contanct-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+    
+#contactForm-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}  
   
+#contactForm {
+    text-align: left;
+    background-color: #292947;
+    width: 95%;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    z-index: 1;
+
+}
 
 @media (min-width: 992px) {
     .contanct-container{

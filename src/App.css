@@ -1,3 +1,4 @@
+
 html {
   font-size: 14px !important;
 }
@@ -33,7 +34,9 @@ h4 {
   font-size: 1.25rem !important;
 }
 
-
+h5 {
+  font-size: 1.125rem !important;
+}
 
 
 .sectionHeading {
@@ -67,9 +70,11 @@ h4 {
 
 
 @media (min-width: 768px) {
-  
+  html {
+    font-size: 16px !important;
+  }
   p {
-    font-size: 1.125rem !important; 
+    font-size: 1rem !important; 
 
   }
   h1 {
@@ -94,7 +99,13 @@ h4 {
 }
 
 @media (min-width: 1200px) {
- 
+  html {
+    font-size: 18px !important;
+  }
+  p {
+    font-size: 1rem !important; 
+
+  }
   h1 {
     font-size: 3rem; 
   }
@@ -104,14 +115,15 @@ h4 {
   }
 
   h3 {
-    font-size: 2rem; 
+    font-size: 2.25rem; 
   }
   
   h4 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
-  p {
-    font-size: 1.25rem; 
+
+  h5 {
+    font-size: 1.75rem;
   }
   .sectionHeading {
     margin: 8rem 0;

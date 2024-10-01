@@ -1,9 +1,9 @@
-import { useRef, useEffect, useContext } from "react"
+import { useContext } from "react"
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import unimelbLogo from '../imgs/unimelb-logo.jpg'
 import qutLogo from "../imgs/qut-logo.png"
-import { motion, useInView, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 import "./Education.css"
 import { SectionRefsContext } from '../Context/SectionRefsContext';
 
@@ -37,8 +37,8 @@ export default function Education() {
                         </div>
                     }
                 >
-                    <h3 >Master of Information Technology</h3>
-                    <h4 >The University of Melbourne</h4>
+                    <h4 >Master of Information Technology</h4>
+                    <h5 >The University of Melbourne</h5>
                     <p>Achievements</p>
                     <ul>
                         <li>Awarded Melbourne Graduate Scholarship - 2022</li>
@@ -57,8 +57,8 @@ export default function Education() {
                         </div>
                     }
                 >
-                    <h3>Bachelor of Information Tehnology (Computer science)</h3>
-                    <h4>Queensland University of Technology</h4>
+                    <h4>Bachelor of Information Tehnology (Computer science)</h4>
+                    <h5>Queensland University of Technology</h5>
                     <p>Achievements</p>
                     <ul>
                         <li>GPA of 6.792 out of 7</li>

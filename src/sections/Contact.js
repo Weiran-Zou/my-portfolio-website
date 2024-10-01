@@ -130,6 +130,7 @@ export default function Contact() {
                 <h2>Let's Get in Touch</h2>
                 <p>If you are interested in any of my works or are passionate about innovative digital solutions, please contact me...</p>
               </div>
+              
               <div className="social-card-container">
                 <div class="social-card-wrapper">
                   <FontAwesomeIcon icon={faEnvelope} size="xl" className='social-icon'/>
