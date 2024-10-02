@@ -53,7 +53,7 @@ export default function Projects() {
         if(isInView) {
             mainControl.start("show")
         }
-    }, [isInView])
+    }, [isInView, mainControl])
 
     return (
         <section 

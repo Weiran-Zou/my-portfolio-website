@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import "./Header.css";
 import NavBar from "./Navbar";
-import {Link} from "react-router-dom"
 import logo from '../imgs/logo2.png'
 import SideDrawer from "./SideDrawer";
 import BackDrop from "./BackDrop";
@@ -29,7 +28,7 @@ const Header = () => {
                     <span />
                     <span />
                 </button>
-                <a href="#home" id="logo" ><img src={logo} ></img></a>
+                <a href="#home" id="logo" ><img src={logo} alt="..."></img></a>
                 <div className="main-nav">
                     <NavBar/>
                 </div>

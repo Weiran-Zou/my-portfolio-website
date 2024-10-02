@@ -1,6 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./Skillcard.css"
-import {animate, motion} from "framer-motion"
+import { motion} from "framer-motion"
 
 const iconVariant = (duration) => ({
     initial: {y: -10},
@@ -28,7 +27,7 @@ export default function Skillcard(props) {
             id="skill-card"
         >
             
-            <img src={props.src} ></img>
+            <img src={props.src} alt="..."></img>
 
         </motion.div >
     

@@ -1,6 +1,6 @@
 import Skillcard from "../components/Skillcard"
-import { useRef, useEffect, useContext } from "react"
-import { motion, useInView, useAnimation } from "framer-motion"
+import { useContext } from "react"
+import { motion } from "framer-motion"
 import express from '../imgs/icons8-express-js.svg'
 import node from '../imgs/icons8-nodejs.svg'
 import react from '../imgs/icons8-react.svg'
