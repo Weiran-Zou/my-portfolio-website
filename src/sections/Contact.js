@@ -65,40 +65,37 @@ export default function Contact() {
         subject: values.subject
       }
       // console.log(templateParams)
-      emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          toast.success('🦄 Submission successful!', {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            transition: Bounce,
-            });
-          actions.setSubmitting(false);
-          actions.resetForm();
+      const response = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+
+      toast.promise(
+        response,
+        {
+          pending: "Sending your message...",
+          success: {
+            render() {
+              actions.setSubmitting(false);
+              actions.resetForm(); 
+              return '🦄 Submission successful!'; 
+            },
+          },
+          error: {
+            render({ data }) {
+              actions.setSubmitting(false);
+              return `FAILED... ${data.text}`; 
+            },
+          },
         },
-        (error) => {
-          console.log('FAILED...', error.text);
-          toast.error(`FAILED... ${error.text}`, {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            transition: Bounce,
-          });
-          actions.setSubmitting(false);
-        },
+        {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+        }
       );
     },
   });

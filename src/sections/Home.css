@@ -31,7 +31,7 @@
 }
 
 #model-robot {
-    width: 80% !important;
+    width: 95% !important;
     height: 40vh!important;
     z-index: 5;
  
@@ -44,6 +44,9 @@
     #intro-text{
         margin-top: 2rem;
         width: 70%;
+    }
+    #model-robot {
+        width: 80% !important;
     }
 
     
@@ -70,7 +73,7 @@
     }
     #model-robot {
         width: calc(50% - 1rem) !important;
-        height: 100vh!important;
+        height: 80vh!important;
     }
     
 }

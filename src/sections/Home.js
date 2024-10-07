@@ -2,7 +2,7 @@ import '../App.css'
 import { TypeAnimation } from 'react-type-animation';
 import { Stars, OrbitControls, Loader } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import React, { useEffect, useContext, Suspense, useRef } from "react";
+import React, { useEffect, useContext, Suspense } from "react";
 import "./Home.css"
 import { SectionRefsContext } from '../context/SectionRefsContext';
 import {
