@@ -1,21 +1,21 @@
 import Skillcard from "../components/Skillcard"
 import { useContext } from "react"
 import { motion } from "framer-motion"
-import express from '../imgs/icons8-express-js.svg'
-import node from '../imgs/icons8-nodejs.svg'
-import react from '../imgs/icons8-react.svg'
-import vue from "../imgs/icons8-vue-js.svg"
-import javaScript from '../imgs/icons8-javascript.svg'
-import html from '../imgs/icons8-html.svg'
-import css from '../imgs/icons8-css.svg'
-import mySql from '../imgs/icons8-mysql.svg'
-import java from '../imgs/icons8-java.svg'
-import reactNative from '../imgs/icons8-react-native.svg'
-import androidStudio from '../imgs/icons8-android-studio.svg'
-import firebase from '../imgs/icons8-firebase.svg'
-import jest from '../imgs/icons8-jest-96.png'
+import express from '../assets/imgs/icons8-express-js.svg'
+import node from '../assets/imgs/icons8-nodejs.svg'
+import react from '../assets/imgs/icons8-react.svg'
+import vue from "../assets/imgs/icons8-vue-js.svg"
+import javaScript from '../assets/imgs/icons8-javascript.svg'
+import html from '../assets/imgs/icons8-html.svg'
+import css from '../assets/imgs/icons8-css.svg'
+import mySql from '../assets/imgs/icons8-mysql.svg'
+import java from '../assets/imgs/icons8-java.svg'
+import reactNative from '../assets/imgs/icons8-react-native.svg'
+import androidStudio from '../assets/imgs/icons8-android-studio.svg'
+import firebase from '../assets/imgs/icons8-firebase.svg'
+import jest from '../assets/imgs/icons8-jest-96.png'
 import './Skills.css'
-import { SectionRefsContext } from '../Context/SectionRefsContext';
+import { SectionRefsContext } from '../context/SectionRefsContext';
 
 export default function Skills() {
     const sectionRefs = useContext(SectionRefsContext);

@@ -4,14 +4,14 @@ import {
     useAnimation,
 
 } from "framer-motion"
-import virtualDoctorImg from '../imgs/Virtual-doctor-book-appointment.png'
-import foodiesImg from "../imgs/Foodies.png"
-import discountAppImg from "../imgs/Discount-Application-resized.png"
-import stockImg from "../imgs/Stocks-Application-1.PNG"
+import virtualDoctorImg from '../assets/imgs/Virtual-doctor-book-appointment.png'
+import foodiesImg from "../assets/imgs/Foodies.png"
+import discountAppImg from "../assets/imgs/Discount-Application-resized.png"
+import stockImg from "../assets/imgs/Stocks-Application-1.PNG"
 import { useRef, useEffect, useContext } from "react"
 import "./Projects.css"
 import Project from "./Project";
-import { SectionRefsContext } from '../Context/SectionRefsContext';
+import { SectionRefsContext } from '../context/SectionRefsContext';
 
 const projects = [
     {

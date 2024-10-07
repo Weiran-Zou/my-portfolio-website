@@ -1,11 +1,11 @@
 import { useContext } from "react"
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import unimelbLogo from '../imgs/unimelb-logo.jpg'
-import qutLogo from "../imgs/qut-logo.png"
+import unimelbLogo from '../assets/imgs/unimelb-logo.jpg'
+import qutLogo from "../assets/imgs/qut-logo.png"
 import { motion } from "framer-motion"
 import "./Education.css"
-import { SectionRefsContext } from '../Context/SectionRefsContext';
+import { SectionRefsContext } from '../context/SectionRefsContext';
 
 export default function Education() {
     const sectionRefs = useContext(SectionRefsContext);

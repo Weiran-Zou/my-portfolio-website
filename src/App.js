@@ -7,7 +7,7 @@ import Projects from "./sections/Projects.js"
 import Contact from "./sections/Contact.js"
 // import Footer from "./components/Footer.js"
 import './App.css';
-import { SectionRefsContext } from "./Context/SectionRefsContext.js"
+import { SectionRefsContext } from "./context/SectionRefsContext.js"
 
 function App() {
   const sectionRefs = useRef([]);

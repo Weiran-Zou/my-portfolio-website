@@ -12,7 +12,7 @@ import emailjs from '@emailjs/browser';
 import './Contact.css'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { SectionRefsContext } from '../Context/SectionRefsContext';
+import { SectionRefsContext } from '../context/SectionRefsContext';
 
 const validate = values => {
   const errors = {};
