@@ -72,8 +72,9 @@
         display: none;
     }
     #model-robot {
+        margin-top: 2rem;
         width: calc(50% - 1rem) !important;
-        height: 80vh!important;
+        height: 90vh!important;
     }
     
 }

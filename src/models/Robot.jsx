@@ -25,8 +25,8 @@ export default function Robot() {
                 setScale([3.5,3.5,3.5]);
                 setPosition([0, -3, 0])
             } else {
-                setScale([2,2,2]);
-                setPosition([0, -1.5, 0])
+                setScale([2.3,2.3,2.3]);
+                setPosition([0, -1.8, 0])
             }
         };
         windowSizeHandler();
