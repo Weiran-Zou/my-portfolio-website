@@ -16,6 +16,7 @@
     padding: 0 1rem;
     width: 100%;
     height: 100%;
+    z-index: 1;
     
 }
 #intro-type {
@@ -36,6 +37,46 @@
     z-index: 5;
  
 }
+
+.social-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 1.5rem;
+    gap: 2rem;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.social-icon {
+    color: white;
+}
+
+
+
+.social-wrapper a :hover {
+    color: #30B2B0;
+}
+.resume-btn {
+    display: flex;
+    width: fit-content; 
+    align-items: center; 
+    gap: 1rem; 
+    border-radius: 9999px; 
+    background-color: rgba(31, 41, 55, 0.1); 
+    padding: 8px 16px; 
+    color: #F9FAFB; 
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease; 
+}
+
+.resume-btn:hover .arrow-icon {
+    transform: rotate(-45deg); /* Rotate -45 degrees on hover */
+}
+
 
 @media (min-width: 768px) and (max-width: 1199px) {
     #home{

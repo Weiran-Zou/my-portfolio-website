@@ -130,23 +130,23 @@ export default function Contact() {
               
               <div className="social-card-container">
                 <div class="social-card-wrapper">
-                  <FontAwesomeIcon icon={faEnvelope} size="xl" className='social-icon'/>
+                  <FontAwesomeIcon icon={faEnvelope} size="xl" />
                   <span class="social-card-text">zouweiran9122@gamil.com</span>
                 </div>
               </div>
               <div className="social-card-container">
                 <div class="social-card-wrapper">
-                  <FontAwesomeIcon icon={faLocationDot} size="xl" className='social-icon'/>
+                  <FontAwesomeIcon icon={faLocationDot} size="xl"/>
                   <span class="social-card-text">Malvern, VIC, Australia</span>
                 </div>
               </div>
               <div className="social-card-container">
                 <div class="social-card-wrapper">
-                  <FontAwesomeIcon icon={faPhone} size="xl" className='social-icon'/>
+                  <FontAwesomeIcon icon={faPhone} size="xl"/>
                   <span class="social-card-text">+61 433 965 706</span>
                 </div>
               </div>
-              <div className="social-card-container">
+              {/* <div className="social-card-container">
                 <div class="social-card-wrapper">
                   <a href="https://www.linkedin.com/in/weiran-zou-239b6419a/" aria-label="Linkedin">
                     <FontAwesomeIcon icon={faLinkedin}  size="2xl" className='social-icon'/>
@@ -156,7 +156,7 @@ export default function Contact() {
                   </a>
                   
                 </div>    
-              </div>
+              </div> */}
               
     
             </motion.div>

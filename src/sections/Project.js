@@ -38,7 +38,7 @@ const Project = ({item}) => {
                 
                
             </MyModal>
-            <div className="project-card">
+            <div className="project-card" onClick={openModal}>
                 <img src={item.img}  alt="..." />
                 <div className="card-body"  >
                     <h5 className="card-title">{item.title}</h5>
