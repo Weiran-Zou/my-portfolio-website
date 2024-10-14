@@ -1,104 +1,82 @@
 import { useContext } from "react"
 import { motion } from "framer-motion"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
-// import {faFacebook} from '@fortawesome/free-brands-svg-icons'
-import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
 import {faPhone} from '@fortawesome/free-solid-svg-icons'
-import { useFormik } from 'formik';
+import { Formik, Form } from 'formik';
 import emailjs from '@emailjs/browser';
 import './Contact.css'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { SectionRefsContext } from '../context/SectionRefsContext';
+import Input from "../components/formElements/Input"
+import * as Yup from "yup";
 
-const validate = values => {
-  const errors = {};
-  if (!values.name) {
-    errors.name = 'Required';
-  } else if (values.name.length > 15) {
-    errors.name = 'Must be 15 characters or less';
+const validationSchema = Yup.object({
+  name: Yup.string()
+    .required('Required'),
+  email: Yup.string()
+    .email('Invalid email format')
+    .required('Required'),
+  subject: Yup.string()
+    .required('Required'),
+  message: Yup.string()
+    .min(6, 'Must be 6 characters or more')
+});
+
+const onSubmit = (values, actions) => {
+  console.log('hi')
+  console.log(values)
+  // alert(JSON.stringify(values, null, 2));
+  
+  const PUBLIC_KEY = "-n3IBVtNIP66TwZyo";
+  const SERVICE_ID = "service_ryrm1vf";
+  const TEMPLATE_ID = "template_x5ugo5c"
+  const templateParams = {
+    to_name: "Weiran Zou",
+    from_name: values.name,
+    from_email: values.email,
+    message: values.message,
+    subject: values.subject
   }
+  // console.log(templateParams)
+  const response = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
 
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
-  }
-
-  if (!values.subject) {
-    errors.subject = 'Required';
-  } 
-
-  if (!values.message) {
-    errors.message = 'Required';
-  } else if (values.message.length < 6) {
-    errors.message= 'Must be 6 characters or more';
-  }
-
-  return errors;
-};
+  toast.promise(
+    response,
+    {
+      pending: "Sending your message...",
+      success: {
+        render() {
+          actions.setSubmitting(false);
+          actions.resetForm(); 
+          return '🦄 Submission successful!'; 
+        },
+      },
+      error: {
+        render({ data }) {
+          actions.setSubmitting(false);
+          return `FAILED... ${data.text}`; 
+        },
+      },
+    },
+    {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    }
+  );
+}
 
 export default function Contact() {
   const sectionRefs = useContext(SectionRefsContext);
-  const formik = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    },
-    validate,
-    onSubmit: (values, actions) => {
-      // alert(JSON.stringify(values, null, 2));
-      
-      const PUBLIC_KEY = "-n3IBVtNIP66TwZyo";
-      const SERVICE_ID = "service_ryrm1vf";
-      const TEMPLATE_ID = "template_x5ugo5c"
-      const templateParams = {
-        to_name: "Weiran Zou",
-        from_name: values.name,
-        from_email: values.email,
-        message: values.message,
-        subject: values.subject
-      }
-      // console.log(templateParams)
-      const response = emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
-
-      toast.promise(
-        response,
-        {
-          pending: "Sending your message...",
-          success: {
-            render() {
-              actions.setSubmitting(false);
-              actions.resetForm(); 
-              return '🦄 Submission successful!'; 
-            },
-          },
-          error: {
-            render({ data }) {
-              actions.setSubmitting(false);
-              return `FAILED... ${data.text}`; 
-            },
-          },
-        },
-        {
-          position: "bottom-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-          transition: Bounce,
-        }
-      );
-    },
-  });
     return (
       <section 
         id="contact" 
@@ -114,7 +92,6 @@ export default function Contact() {
               <div className="divider" ></div>
           </motion.div>
         
-            {/* Same as */}
           <div className="contanct-container">
             <motion.div  
               id="myContact" 
@@ -123,42 +100,30 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{duration: 0.5, delay: 0.5}}
             >
+           
               <div id='contactInfo'>
                 <h2>Let's Get in Touch</h2>
                 <p>If you are interested in any of my works or are passionate about innovative digital solutions, please contact me...</p>
               </div>
               
-              <div className="social-card-container">
-                <div class="social-card-wrapper">
-                  <FontAwesomeIcon icon={faEnvelope} size="xl" />
-                  <span class="social-card-text">zouweiran9122@gamil.com</span>
-                </div>
+            
+              <div class="social-card-wrapper">
+                <FontAwesomeIcon icon={faEnvelope} size="2xl" className="contact-icon"/>
+                <span class="social-card-text">zouweiran9122@gamil.com</span>
               </div>
-              <div className="social-card-container">
-                <div class="social-card-wrapper">
-                  <FontAwesomeIcon icon={faLocationDot} size="xl"/>
-                  <span class="social-card-text">Malvern, VIC, Australia</span>
-                </div>
+            
+            
+              <div class="social-card-wrapper">
+                <FontAwesomeIcon icon={faLocationDot} size="2xl" className="contact-icon"/>
+                <span class="social-card-text">Malvern, VIC, Australia</span>
               </div>
-              <div className="social-card-container">
-                <div class="social-card-wrapper">
-                  <FontAwesomeIcon icon={faPhone} size="xl"/>
-                  <span class="social-card-text">+61 433 965 706</span>
-                </div>
+          
+            
+              <div class="social-card-wrapper">
+                <FontAwesomeIcon icon={faPhone} size="2xl" className="contact-icon"/>
+                <span class="social-card-text">+61 433 965 706</span>
               </div>
-              {/* <div className="social-card-container">
-                <div class="social-card-wrapper">
-                  <a href="https://www.linkedin.com/in/weiran-zou-239b6419a/" aria-label="Linkedin">
-                    <FontAwesomeIcon icon={faLinkedin}  size="2xl" className='social-icon'/>
-                  </a>
-                  <a href="https://github.com/Weiran-Zou" aria-label="Github" className='social-icon'>
-                    <FontAwesomeIcon icon={faGithub} size="2xl" className='social-icon'/>
-                  </a>
-                  
-                </div>    
-              </div> */}
-              
-    
+          
             </motion.div>
             
             <motion.div 
@@ -168,72 +133,49 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{duration: 0.5, delay: 0.5}}
             >
-                <form 
-                  id="contactForm" 
-                  onSubmit={formik.handleSubmit}
-                  >                 
-                  <div class="mb-4" >
-                    <label htmlFor="name" class="form-label">Your Name</label>
-                    <input 
-                      type="text" 
-                      name="name"
-                      class="form-control border-0"  
-                      style={{backgroundColor:"#0c0c1d", color:"white"}}
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      value={formik.values.name}
-                      />
-                    {formik.touched.name && formik.errors.name ? (
-                      <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.name}</div>
-                    ) : null}
-                  </div>
-                  <div class="mb-4">
-                    <label htmlFor="email" class="form-label">Your Email address</label>
-                    <input 
-                      type="email" 
-                      name="email"
-                      class="form-control border-0"  
-                      style={{backgroundColor:"#0c0c1d", color:"white"}}
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      value={formik.values.email}
-                      />   
-                    {formik.touched.email && formik.errors.email ? (
-                      <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.email}</div>
-                    ) : null} 
-                  </div>      
-                  <div class="mb-4">
-                    <label htmlFor="subject" class="form-label">Subject</label>
-                    <input 
-                      type="text" 
-                      name="subject"
-                      class="form-control border-0" 
-                      style={{backgroundColor:"#0c0c1d", color:"white"}}
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      value={formik.values.subject}
-                      />    
-                    {formik.touched.subject && formik.errors.subject ? (
-                      <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.subject}</div>
-                    ) : null} 
-                  </div> 
-                  <div class="mb-4">
-                    <label htmlFor="message" class="form-label">Message</label>
-                    <textarea 
-                      type="text" 
-                      name="message"
-                      class="form-control border-0" 
-                      style={{height: "230px",backgroundColor:"#0c0c1d", color:"white"}} 
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      value={formik.values.message}
-                    />
-                    {formik.touched.message && formik.errors.message? (
-                      <div style={{color:"red", marginTop:"1rem"}}>{formik.errors.message}</div>
-                    ) : null} 
-                  </div>
-                  <div class="mb-4 text-center" style={{marginTop:"2rem"}}>
-                    <button type="submit" class="btn btn-primary" style={{fontWeight:"bold", width:"100%", fontSize: "20px", padding:"1rem 0", backgroundColor:"#268077", border:"none"}}>Send</button>
+              
+             <Formik initialValues={{
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
+              }}
+              validationSchema = {validationSchema}
+              onSubmit={onSubmit}>
+               
+                <Form id="contactForm">        
+                  <h5 style={{color:"#40e0d0"}}>Send Me a Message</h5> 
+                  <Input 
+                    label="Full Name" 
+                    name="name" 
+                    type="text" 
+                    placeholder="What's your full name?"
+                    element="input"
+                  /> 
+                   <Input 
+                    label="Email" 
+                    name="email" 
+                    type="email" 
+                    placeholder="email@example.com"
+                    element="input"
+                  /> 
+                   <Input 
+                    label="Subject" 
+                    name="subject" 
+                    type="text" 
+                    placeholder="What's your topic?"
+                    element="input"
+                  /> 
+                   <Input 
+                    label="Message" 
+                    name="message" 
+                    placeholder="Enter your message"
+                    type="text"
+                    rows="6"
+                  /> 
+                
+                 
+                    <button type="submit" className="contact-btn">Send</button>
                     <ToastContainer
                       position="bottom-center"
                       autoClose={5000}
@@ -247,8 +189,10 @@ export default function Contact() {
                       theme="light"
                       transition= {Bounce}
                     />
-                  </div>    
-                </form>
+                   
+                </Form>
+               
+              </Formik>
             </motion.div>
           </div>  
               

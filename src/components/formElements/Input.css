@@ -1,0 +1,28 @@
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    
+}
+
+.input-container input, textarea {
+    color: white;
+    background-color: #292947;
+    /* border: 2px solid #8686F1; */
+    border: 1px solid #a0a0a0; 
+    border-radius: 10px;
+    padding: 1rem
+}
+
+.input-container input::placeholder, textarea::placeholder {
+    color: #a0a0a0; 
+   
+}
+
+.input-container input:focus, textarea:focus{
+    border-color:  #40e0d0;
+    outline: none;
+}
+
+

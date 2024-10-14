@@ -41,7 +41,7 @@ const Project = ({item}) => {
             <div className="project-card" onClick={openModal}>
                 <img src={item.img}  alt="..." />
                 <div className="card-body"  >
-                    <h5 className="card-title">{item.title}</h5>
+                    <h5 >{item.title}</h5>
                     <ul className="techList">
                         { item.tech.map(tech =>
                             <li>{tech}</li>
@@ -51,7 +51,7 @@ const Project = ({item}) => {
                     <p className="card-text">{item.description}</p>
                 </div>
                 <div className="overlay">
-                    <button type="button" class="btn btn-primary" onClick={openModal}>Show More</button>
+                    <button type="button" onClick={openModal}>Show More</button>
                 </div>
             </div>
         </>

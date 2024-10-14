@@ -36,7 +36,7 @@ export default function Skills() {
             </motion.div>
                 <div className="skills-container">
                     <div className="skills-item"> 
-                        <h2 className="row">Frontend SKills</h2>
+                        <h2 >Frontend SKills</h2>
                         <div className="skills-row">          
                             <Skillcard src={react} skillName="React" />
                             <Skillcard src={vue} skillName="Vue" />
@@ -46,7 +46,7 @@ export default function Skills() {
                         </div>
                     </div>    
                     <div className="skills-item">
-                        <h2 className="row">Backend Skills</h2>
+                        <h2>Backend Skills</h2>
                         <div className="skills-row">
                             <Skillcard src={node} skillName="Node" />
                             <Skillcard src={express} skillName="Express" />
@@ -54,7 +54,7 @@ export default function Skills() {
                         </div>
                     </div>
                     <div className="skills-item"> 
-                        <h2 className="row">Mobile Skills</h2>
+                        <h2>Mobile Skills</h2>
                         <div className="skills-row">
                             <Skillcard src={java} skillName="Java" />
                             <Skillcard src={reactNative} skillName="React Native" />
@@ -63,7 +63,7 @@ export default function Skills() {
                         </div>
                     </div>
                     <div className="skills-item"> 
-                        <h2 className="row">Tests</h2>
+                        <h2>Tests</h2>
                         <div className="skills-row">
                             <Skillcard src={jest} skillName="Jest" />
                             

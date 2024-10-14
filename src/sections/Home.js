@@ -65,10 +65,7 @@ export default function Home() {
                 
                 </div>
                 <div id="intro-descp">  
-                    <p 
-                       
-                        
-                    >
+                    <p>
                         I am an enthusiastic and self-motivated young professional with a passion for software development and creating innovative digital solutions. I am eager to join collaborative environment where I can leverage my skills and contribute to impactful projects.
                     </p>   
                     

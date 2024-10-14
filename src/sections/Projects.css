@@ -13,11 +13,10 @@
     flex-direction: column;
     flex-wrap: wrap;  
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 .project-wrapper{
     width: calc(100% - 1rem);
-    height: 430px;
     max-width: 330px;
     margin: 0.5rem;
 }

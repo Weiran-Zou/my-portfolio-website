@@ -15,7 +15,6 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "bootstrap": "^5.3.2",
     "emailjs-com": "^3.2.0",
     "formik": "^2.4.6",
     "framer-motion": "^11.3.24",
@@ -26,7 +25,8 @@
     "react-type-animation": "^3.2.0",
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.167.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
