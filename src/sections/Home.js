@@ -17,24 +17,24 @@ import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
-const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
+const MOTION_COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 const resume_link = "https://drive.google.com/file/d/1jvlK5EDJkPZZHWLm_RPqbcUirTKgHxRm/view?usp=sharing"
 
 export default function Home() {
     const sectionRefs = useContext(SectionRefsContext);
-    const color = useMotionValue(COLORS_TOP[0]);
-    const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
+    const color = useMotionValue(MOTION_COLORS[0]);
+    const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #14161f 50%, ${color})`;
     const border = useMotionTemplate`1px solid ${color}`;
     const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
     useEffect(() => {
-        animate(color, COLORS_TOP, {
+        animate(color, MOTION_COLORS, {
           ease: "easeInOut",
           duration: 10,
           repeat: Infinity,
           repeatType: "mirror",
         });
-      }, []);
+      }, [color]);
     return (
         <motion.section
             id="home" 

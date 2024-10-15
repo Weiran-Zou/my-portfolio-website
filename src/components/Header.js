@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./Header.css";
 import NavBar from "./Navbar";
-import logo from '../assets/imgs/logo2.png'
+import logo from '../assets/imgs/logo.png'
 import SideDrawer from "./SideDrawer";
 import BackDrop from "./BackDrop";
 

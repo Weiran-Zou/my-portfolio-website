@@ -20,7 +20,7 @@ const Input = ({ label, ...props }) => {
             <label htmlFor={props.id || props.name}>{label}</label>
             {element}
             {meta.touched && meta.error ? (
-                <div style={{color:"#FF4D4D", fontSize:"0.8rem"}}>{meta.error}</div>
+                <div className="input-error">{meta.error}</div>
             ) : null}
         </div>
     )

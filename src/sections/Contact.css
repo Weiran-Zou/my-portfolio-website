@@ -12,7 +12,6 @@
 #myContact {
     display: flex;
     flex-direction: column;
-    color:white;
     width: 100%;
     max-width: 600px; 
     z-index: 1;
@@ -20,11 +19,9 @@
     
 }
 #contactInfo {
-    color:white;
-   
     text-align:left;
     h2 {
-        color: #40e0d0;
+        color: var(--secondary-content);
     }
     p {
         line-height: 1.75rem;
@@ -36,7 +33,6 @@
 .social-card-wrapper {
     display: flex;
     align-items: center;
-    color: white;
     gap: 2rem;
     width: 100%; 
     font-size: 1.125rem;
@@ -49,7 +45,7 @@
 }
 
 .contact-icon {
-    color: #40e0d0;
+    color: var(--secondary-content);
 }
     
 #contactForm-container{
@@ -65,24 +61,32 @@
     display: flex;
     flex-direction: column;
     max-width: 600px;
-    color: white;
-    background-color: #292947;
+    background-color: var(--primary);
     padding: 2rem;
     width: 100%;
     gap: 1.2rem;
     border-radius: 10px;
+    border: 2px solid var(--border);
 
+}
+
+#contactForm h5 {
+    color: var(--secondary-content)
 }
 
 .contact-btn {
     font-weight:bold;
     width:100%;
-    color: white;
     font-size:20px;
     padding:1rem 0;
-    background-color:#268077;
+    background-color:var(--secondary);
     border:none;
+    margin-top: 1rem;
 
+}
+
+.contact-btn:hover {
+    background-color:var(--secondary-light);
 }
 
 

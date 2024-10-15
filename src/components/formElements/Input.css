@@ -7,10 +7,9 @@
 }
 
 .input-container input, textarea {
-    color: white;
-    background-color: #292947;
-    /* border: 2px solid #8686F1; */
-    border: 1px solid #a0a0a0; 
+    color: var(--text);
+    background-color: var(--primary-dark);
+    border: 2px solid var(--border);
     border-radius: 10px;
     padding: 1rem
 }
@@ -21,8 +20,13 @@
 }
 
 .input-container input:focus, textarea:focus{
-    border-color:  #40e0d0;
+    border-color:  var(--secondary-light);
     outline: none;
+}
+
+.input-error {
+    color: var(--error-content);
+    font-size:0.8rem
 }
 
 

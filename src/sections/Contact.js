@@ -144,7 +144,7 @@ export default function Contact() {
               onSubmit={onSubmit}>
                
                 <Form id="contactForm">        
-                  <h5 style={{color:"#40e0d0"}}>Send Me a Message</h5> 
+                  <h5>Send Me a Message</h5> 
                   <Input 
                     label="Full Name" 
                     name="name" 

@@ -2,8 +2,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #292947;
-    color: white;
+    background-color: var(--primary);
+    border: 2px solid var(--border);
     border-radius: 15px;
     width: 100%;
     height: 100%;
@@ -11,6 +11,7 @@
     padding: 1rem;
     transition: all 0.3s ease-in-out;
     gap: 2rem;
+    cursor: pointer;
     .card-body {
         display: flex;
         flex-direction: column;
@@ -33,16 +34,15 @@
         flex-wrap: wrap;
         list-style: none;
         padding: 0;
-        color: #8686F1;
         align-items: left;
         gap: 0.5rem;
     }
     .techList li {
         display: inline-block;
         padding: 0.3rem 0.5rem;
-        
+        color: var(--primary-content);
         border-radius: 15px;
-        background-color:#19262E
+        background-color: var(--primary-dark)
     }
     .card-text {
         -webkit-line-clamp: 3;
@@ -54,8 +54,8 @@
 }
 
 .project-details-modal {
-    top: 10vh !important;
-    background-color:#2A2A3C!important;
+    top: 12vh !important;
+    background-color: var(--background);
     color: white;
    
     .card-body{
@@ -71,9 +71,9 @@
         margin-top: 1rem;
         list-style: none;
         padding: 0;
-        color: #8F8FC6;
+        color: var(--primary-content);
         align-items: left;
-        font-size:  0.875rem
+        font-size:  1rem
     }
     .techList li {
         display: inline-block;
@@ -110,9 +110,9 @@
     position: absolute;
     bottom: 30%;
     padding: 10px 20px; 
-    background-color: #268077;
+    background-color: var(--secondary);
     font-weight: bold;
-    color: white; 
+
     border: none;
     border-radius: 5px;
 }
@@ -127,7 +127,7 @@
 }
 
 .overlay button:hover {
-    background-color: #2ab1a5
+    background-color: var(--secondary-light)
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {

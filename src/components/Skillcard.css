@@ -1,7 +1,7 @@
 #skill-card {
-   border-color: #292947;
+   border-color: var(--border);
    border-style: solid;
-   box-shadow: 6px 6px 6px #292947;
+   box-shadow: 6px 6px 6px var(--border);
    scale: (1,1);
    
 }
