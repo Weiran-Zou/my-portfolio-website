@@ -35,40 +35,65 @@ export default function Skills() {
                 <div className="divider" ></div>
             </motion.div>
                 <div className="skills-container">
-                    <div className="skills-item"> 
-                        <h2 >Frontend SKills</h2>
-                        <div className="skills-row">          
-                            <Skillcard src={react} skillName="React" />
-                            <Skillcard src={vue} skillName="Vue" />
-                            <Skillcard src={javaScript} skillName="JavaScript" />
-                            <Skillcard src={html} skillName="HTML" />
-                            <Skillcard src={css} skillName="CSS" />
-                        </div>
-                    </div>    
-                    <div className="skills-item">
-                        <h2>Backend Skills</h2>
-                        <div className="skills-row">
-                            <Skillcard src={node} skillName="Node" />
-                            <Skillcard src={express} skillName="Express" />
-                            <Skillcard src={mySql} skillName="MySQL" />
-                        </div>
+                <motion.div 
+                    className="skills-item"  
+                    initial={{y:200, opacity:0}}
+                    whileInView={{y:0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{duration: 0.5, delay: 0.2}}
+                > 
+                    <h2 >Frontend SKills</h2>
+                    <div className="skills-row">          
+                        <Skillcard src={react} skillName="React" />
+                        <Skillcard src={vue} skillName="Vue" />
+                        <Skillcard src={javaScript} skillName="JavaScript" />
+                        <Skillcard src={html} skillName="HTML" />
+                        <Skillcard src={css} skillName="CSS" />
                     </div>
-                    <div className="skills-item"> 
-                        <h2>Mobile Skills</h2>
-                        <div className="skills-row">
-                            <Skillcard src={java} skillName="Java" />
-                            <Skillcard src={reactNative} skillName="React Native" />
-                            <Skillcard src={androidStudio} skillName="Android Studio" />
-                            <Skillcard src={firebase} skillName="Firebase" />
-                        </div>
+                </motion.div> 
+                <motion.div 
+                    className="skills-item"  
+                    initial={{y:200, opacity:0}}
+                    whileInView={{y:0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{duration: 0.5, delay: 0.2}}
+                > 
+                    <h2 >Backend Skills</h2>
+                    <div className="skills-row">          
+                        <Skillcard src={node} skillName="Node" />
+                        <Skillcard src={express} skillName="Express" />
+                        <Skillcard src={mySql} skillName="MySQL" />
                     </div>
-                    <div className="skills-item"> 
-                        <h2>Tests</h2>
-                        <div className="skills-row">
-                            <Skillcard src={jest} skillName="Jest" />
-                            
-                        </div>
+                </motion.div> 
+                <motion.div 
+                    className="skills-item"  
+                    initial={{y:200, opacity:0}}
+                    whileInView={{y:0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{duration: 0.5, delay: 0.2}}
+                > 
+                    <h2 >Mobile Skills</h2>
+                    <div className="skills-row">          
+                        <Skillcard src={java} skillName="Java" />
+                        <Skillcard src={reactNative} skillName="React Native" />
+                        <Skillcard src={androidStudio} skillName="Android Studio" />
+                        <Skillcard src={firebase} skillName="Firebase" />
                     </div>
+                </motion.div> 
+                
+                <motion.div 
+                    className="skills-item"  
+                    initial={{y:200, opacity:0}}
+                    whileInView={{y:0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{duration: 0.5, delay: 0.2}}
+                > 
+                    <h2 >Tests</h2>
+                    <div className="skills-row">          
+                        <Skillcard src={jest} skillName="Jest" />
+                    </div>
+                </motion.div> 
+                  
                 </div>
                 
                 
