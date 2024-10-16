@@ -89,6 +89,7 @@ export default function Home() {
                         <FontAwesomeIcon icon={faArrowRight} className='arrow-icon'/>
                        
                     </motion.button>
+                    
                     <motion.a  
                         whileHover={{
                             scale: 1.15,
@@ -103,7 +104,7 @@ export default function Home() {
                         }} 
                         href="https://github.com/Weiran-Zou" 
                         aria-label="Github" 
-                        className='social-icon' 
+                       
                         target="_blank">
                         <FontAwesomeIcon icon={faGithub} size="2xl" className='social-icon'/>
                     </motion.a>

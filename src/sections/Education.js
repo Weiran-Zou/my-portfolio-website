@@ -26,8 +26,8 @@ export default function Education() {
             <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
-                    contentStyle={{ background: "#182569", color: 'white'}}
-                    contentArrowStyle={{ borderRight: '7px solid #182569' }}
+                    contentStyle={{ background: "#37298e", color: 'white'}}
+                    contentArrowStyle={{ borderRight: '7px solid #37298e' }}
                     date="FEB 2022 - JUL 2023"   
                     icon={
                         <div className="icon-container">
@@ -37,15 +37,17 @@ export default function Education() {
                 >
                     <h4 >Master of Information Technology</h4>
                     <h5 >The University of Melbourne</h5>
-                    <p>Achievements</p>
-                    <ul className="achievemets-list">
-                        <li>Awarded Melbourne Graduate Scholarship - 2022</li>
-                    </ul>
+                    <div className="achievement-wrapper">
+                        <p>Achievements</p>
+                        <ul className="achievemets-list">
+                            <li>Awarded Melbourne Graduate Scholarship - 2022</li>
+                        </ul>
+                    </div>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
-                    contentStyle={{ background: "#182569", color: 'white'}}
-                    contentArrowStyle={{ borderRight: '7px solid #182569' }}
+                    contentStyle={{ background: "#37298e", color: 'white'}}
+                    contentArrowStyle={{ borderRight: '7px solid #37298e' }}
                     date="JUN 2019 - JAN 2022"
                     icon={
                         <div className="icon-container">
@@ -55,11 +57,14 @@ export default function Education() {
                 >
                     <h4>Bachelor of Information Tehnology (Computer science)</h4>
                     <h5>Queensland University of Technology</h5>
-                    <p>Achievements</p>
-                    <ul className="achievemets-list">
-                        <li>GPA of 6.792 out of 7</li>
-                        <li>Dean’s List Award (2020 & 2021)</li>
-                    </ul>
+                    
+                    <div className="achievement-wrapper">
+                        <p>Achievements</p>
+                        <ul className="achievemets-list">
+                            <li>GPA of 6.792 out of 7</li>
+                            <li>Dean’s List Award (2020 & 2021)</li>
+                        </ul>
+                    </div>
                 </VerticalTimelineElement>
         
             </VerticalTimeline>

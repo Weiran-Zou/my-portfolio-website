@@ -23,6 +23,10 @@
   
 }
 
+.achievement-wrapper {
+    color: var(--text-light)
+}
+
 .achievemets-list{
     margin-left: 2rem;
 }

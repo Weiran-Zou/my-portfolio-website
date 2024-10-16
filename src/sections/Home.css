@@ -48,14 +48,18 @@
     border-radius: 10px;
 }
 
+
 .social-icon {
-    color: white;
+    color: var(--text);
+    
 }
 
 
 
 .social-wrapper a :hover {
-    color: var(--secondary-light);
+    color: var(--secondary-content);
+    
+   
 }
 .resume-btn {
     display: flex;
