@@ -26,8 +26,8 @@ export default function Education() {
             <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
-                    contentStyle={{ background: "#37298e", color: 'white'}}
-                    contentArrowStyle={{ borderRight: '7px solid #37298e' }}
+                    contentStyle={{ background: "#1d1934", color: 'white'}}
+                    contentArrowStyle={{ borderRight: '7px solid #1d1934' }}
                     date="FEB 2022 - JUL 2023"   
                     icon={
                         <div className="icon-container">
@@ -46,8 +46,8 @@ export default function Education() {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
-                    contentStyle={{ background: "#37298e", color: 'white'}}
-                    contentArrowStyle={{ borderRight: '7px solid #37298e' }}
+                    contentStyle={{ background: "#1d1934", color: 'white'}}
+                    contentArrowStyle={{ borderRight: '7px solid #1d1934' }}
                     date="JUN 2019 - JAN 2022"
                     icon={
                         <div className="icon-container">

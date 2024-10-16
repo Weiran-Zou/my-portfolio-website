@@ -23,7 +23,7 @@ const resume_link = "https://drive.google.com/file/d/1jvlK5EDJkPZZHWLm_RPqbcUirT
 export default function Home() {
     const sectionRefs = useContext(SectionRefsContext);
     const color = useMotionValue(MOTION_COLORS[0]);
-    const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #14161f 50%, ${color})`;
+    const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #131122 50%, ${color})`;
     const border = useMotionTemplate`1px solid ${color}`;
     const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
