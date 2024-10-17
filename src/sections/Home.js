@@ -1,8 +1,7 @@
 import '../App.css'
-import { TypeAnimation } from 'react-type-animation';
-import { Stars, OrbitControls, Loader } from "@react-three/drei";
+import { Stars, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import React, { useEffect, useContext, Suspense } from "react";
+import React, { useEffect, useContext, Suspense, useRef } from "react";
 import "./Home.css"
 import { SectionRefsContext } from '../context/SectionRefsContext';
 import {
@@ -16,6 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
+import Typed from 'typed.js';
 
 const MOTION_COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 const resume_link = "https://drive.google.com/file/d/1jvlK5EDJkPZZHWLm_RPqbcUirTKgHxRm/view?usp=sharing"
@@ -26,7 +26,22 @@ export default function Home() {
     const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #131122 50%, ${color})`;
     const border = useMotionTemplate`1px solid ${color}`;
     const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
+    const typeEleRef = useRef(null);
 
+    useEffect(() => {
+        const typed = new Typed(typeEleRef.current, {
+        strings: ['Full Stack Development.', 'Android App Development.'],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true
+    });
+
+        return () => {
+        // Destroy Typed instance during cleanup to stop animation
+        typed.destroy();
+        };
+    }, []);
+    
     useEffect(() => {
         animate(color, MOTION_COLORS, {
           ease: "easeInOut",
@@ -45,25 +60,12 @@ export default function Home() {
             <motion.div id="intro-text"  initial={{x:-100, opacity:0}}
                         animate={{x:0, opacity:1}}
                         transition={{duration: 0.5, delay: 0.5}}>
-                <div id="intro-type">
-                    <TypeAnimation
-                        preRenderFirstString={true}
-                        sequence={[
-                            "Hi, I'm Weiran (Peter) Zou. \n",
-                            1000,
-                            "Hi, I'm Weiran (Peter) Zou. \n Full Stack Development",
-                            1000,
-                            "Hi, I'm Weiran (Peter) Zou. \n Android App Development",
-                            1000
-                            
-                        ]}
-                        wrapper="span"
-                        speed={50}
-                        style={{whiteSpace: 'pre-line', fontWeight:"bold" }}
-                        repeat={Infinity}
-                    />
-                
+                <div className='intro-main'>
+                    <h1>Hi, I'm Weiran (Peter) Zou.</h1>
+                    <div className='typing-text'><span ref={typeEleRef}/></div>
+
                 </div>
+
                 <div id="intro-descp">  
                     <p>
                         I am an enthusiastic and self-motivated young professional with a passion for software development and creating innovative digital solutions. I am eager to join collaborative environment where I can leverage my skills and contribute to impactful projects.
@@ -125,7 +127,6 @@ export default function Home() {
                     
                 </Canvas>
             </motion.div>
-            <Loader />
               
             <div style={{position:"fixed", zIndex: "0px", inset: "0px"}}>
                 <Canvas>
