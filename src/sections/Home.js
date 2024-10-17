@@ -1,5 +1,5 @@
 import '../App.css'
-import { Stars, OrbitControls } from "@react-three/drei";
+import { Stars, OrbitControls, Loader } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { useEffect, useContext, Suspense, useRef } from "react";
 import "./Home.css"
@@ -59,7 +59,7 @@ export default function Home() {
         
             <motion.div id="intro-text"  initial={{x:-100, opacity:0}}
                         animate={{x:0, opacity:1}}
-                        transition={{duration: 0.5, delay: 0.5}}>
+                        transition={{duration: 0.5, delay: 0.8}}>
                 <div className='intro-main'>
                     <h1>Hi, I'm Weiran (Peter) Zou.</h1>
                     <div className='typing-text'><span ref={typeEleRef}/></div>
@@ -115,7 +115,7 @@ export default function Home() {
             </motion.div>
             <motion.div  id='model-robot' initial={{x:100, opacity:0}}
                         animate={{x:0, opacity:1}}
-                        transition={{duration: 0.5, delay: 0.5}}>
+                        transition={{duration: 0.5, delay: 0.8}}>
                 <Canvas  camera={{ position: [0, 0, 8], fov: 75 }}>
                     <directionalLight position={[-5, -5, 5]} intensity={4} />
                     
@@ -126,8 +126,9 @@ export default function Home() {
                     <OrbitControls enableZoom={false}/> 
                     
                 </Canvas>
+                
             </motion.div>
-              
+            <Loader/>
             <div style={{position:"fixed", zIndex: "0px", inset: "0px"}}>
                 <Canvas>
                     <Stars radius={50} count={2500} factor={4} fade speed={2} />

@@ -1,5 +1,5 @@
 import React from "react";
-import { useField, ErrorMessage } from 'formik';
+import { useField } from 'formik';
 import './Input.css'
 
 const Input = ({ label, ...props }) => {
