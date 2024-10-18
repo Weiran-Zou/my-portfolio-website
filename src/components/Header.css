@@ -32,7 +32,7 @@
     background: white;
 }
 
-#logo {
+.logo {
     max-height: 70px;
     
     img {

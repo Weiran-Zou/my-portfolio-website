@@ -1,5 +1,5 @@
 import '../App.css'
-import { Stars, OrbitControls, Loader } from "@react-three/drei";
+import { Stars, OrbitControls,  Html, useProgress } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { useEffect, useContext, Suspense, useRef } from "react";
 import "./Home.css"
@@ -20,6 +20,10 @@ import Typed from 'typed.js';
 // const MOTION_COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 const MOTION_COLORS = ["#281e66", "#372a8d", "#661e38", "#782443"];
 const resume_link = "https://drive.google.com/file/d/1jvlK5EDJkPZZHWLm_RPqbcUirTKgHxRm/view?usp=sharing"
+function Loader() {
+    const { progress } = useProgress()
+    return <Html center>{progress.toFixed(2)} % loaded</Html>
+}
 
 export default function Home() {
     const sectionRefs = useContext(SectionRefsContext);
@@ -118,7 +122,7 @@ export default function Home() {
                 <Canvas  camera={{ position: [0, 0, 8], fov: 75 }}>
                     <directionalLight position={[-5, -5, 5]} intensity={4} />
                     
-                    <Suspense fallback={null}>
+                    <Suspense fallback={<Loader/>}>
                         <Robot />
                         
                     </Suspense>
@@ -127,7 +131,7 @@ export default function Home() {
                 </Canvas>
                 
             </motion.div>
-            <Loader/>
+       
             <div style={{position:"fixed", zIndex: "0px", inset: "0px"}}>
                 <Canvas>
                     <Stars radius={50} count={2500} factor={4} fade speed={2} />

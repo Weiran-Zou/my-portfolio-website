@@ -28,7 +28,7 @@ const Header = () => {
                     <span />
                     <span />
                 </button>
-                <a href="#home" id="logo" ><img src={logo} alt="..."></img></a>
+                <a href="#home" className="logo" ><img src={logo} alt="..."></img></a>
                 <div className="main-nav">
                     <NavBar/>
                 </div>
