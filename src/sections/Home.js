@@ -63,7 +63,7 @@ export default function Home() {
                         transition={{duration: 0.5, delay: 0.8}}>
                 <div className='intro-main'>
                     <h1>Hi, I'm Weiran (Peter) Zou.</h1>
-                    <div className='typing-text'><span ref={typeEleRef}/></div>
+                    <h2 className='typing-text'><span ref={typeEleRef}/></h2>
 
                 </div>
 

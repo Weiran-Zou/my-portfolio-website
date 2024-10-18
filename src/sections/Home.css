@@ -29,20 +29,11 @@
     align-items: center;
 }
 
-.typing-text {
-    font-size: 2rem; 
-}
+
 
 .typing-text span {
     color: var(--secondary-content);
     font-weight: 600;
-}
-
-
-
-#intro-type {
-    font-size: 2rem;
-    
 }
 
 #intro-descp{
