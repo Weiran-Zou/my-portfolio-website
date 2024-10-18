@@ -62,55 +62,56 @@ export default function Home() {
                         animate={{x:0, opacity:1}}
                         transition={{duration: 0.5, delay: 0.8}}>
                 <div className='intro-main'>
-                    <h1>Hi, I'm Weiran (Peter) Zou.</h1>
+                    <h1>Hi, I'm</h1>
+                    <h1>Weiran (Peter) Zou.</h1>
                     <h3 className='typing-text'><span ref={typeEleRef}/></h3>
-
+                
+                    <p id="intro-descp">I am an enthusiastic software developer passionate about building innovative digital solutions.</p>   
+                
+                    <div class="social-wrapper">
+                        <motion.button
+                            style={{
+                                border,
+                                boxShadow,
+                            }}
+                            whileHover={{
+                                scale: 1.05,
+                            }}
+                            whileTap={{
+                                scale: 0.985,
+                            }}
+                            className='resume-btn'
+                            onClick={e => window.open(resume_link, "_blank")}
+                            >
+                            Download Resume
+                            <FontAwesomeIcon icon={faArrowRight} className='arrow-icon'/>
+                        
+                        </motion.button>
+                        
+                        <motion.a  
+                            whileHover={{
+                                scale: 1.15,
+                            }} 
+                            href="https://www.linkedin.com/in/weiran-zou-239b6419a/" 
+                            aria-label="Linkedin" target="_blank">
+                            <FontAwesomeIcon icon={faLinkedin}  size="2xl" className='social-icon'/>
+                        </motion.a>
+                        <motion.a 
+                            whileHover={{
+                                scale: 1.15,
+                            }} 
+                            href="https://github.com/Weiran-Zou" 
+                            aria-label="Github" 
+                        
+                            target="_blank">
+                            <FontAwesomeIcon icon={faGithub} size="2xl" className='social-icon'/>
+                        </motion.a>
+                    
+                    </div> 
                 </div>
 
-                <div id="intro-descp">  
-                    <p>I am an enthusiastic software developer passionate about building innovative digital solutions.</p>   
-                    
-                </div>
-                <div class="social-wrapper">
-                    <motion.button
-                        style={{
-                            border,
-                            boxShadow,
-                        }}
-                        whileHover={{
-                            scale: 1.05,
-                        }}
-                        whileTap={{
-                            scale: 0.985,
-                        }}
-                        className='resume-btn'
-                        onClick={e => window.open(resume_link, "_blank")}
-                        >
-                        Download Resume
-                        <FontAwesomeIcon icon={faArrowRight} className='arrow-icon'/>
-                       
-                    </motion.button>
-                    
-                    <motion.a  
-                        whileHover={{
-                            scale: 1.15,
-                        }} 
-                        href="https://www.linkedin.com/in/weiran-zou-239b6419a/" 
-                        aria-label="Linkedin" target="_blank">
-                        <FontAwesomeIcon icon={faLinkedin}  size="2xl" className='social-icon'/>
-                    </motion.a>
-                    <motion.a 
-                        whileHover={{
-                            scale: 1.15,
-                        }} 
-                        href="https://github.com/Weiran-Zou" 
-                        aria-label="Github" 
-                       
-                        target="_blank">
-                        <FontAwesomeIcon icon={faGithub} size="2xl" className='social-icon'/>
-                    </motion.a>
-                  
-                </div> 
+               
+             
             </motion.div>
             <motion.div  id='model-robot' initial={{x:100, opacity:0}}
                         animate={{x:0, opacity:1}}
