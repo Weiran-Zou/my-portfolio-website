@@ -38,9 +38,7 @@
 }
 
 .intro-descp{
-    /* justify-content: center; */
-    max-width:70ch;
-   
+    width: 90%;
 }
 
 #model-robot {
