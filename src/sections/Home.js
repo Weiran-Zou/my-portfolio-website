@@ -31,7 +31,7 @@ export default function Home() {
 
     useEffect(() => {
         const typed = new Typed(typeEleRef.current, {
-        strings: ['Full Stack Development.', 'Android App Development.'],
+        strings: ['Full Stack Development', 'Android App Development'],
         typeSpeed: 50,
         backSpeed: 40,
         loop: true
@@ -62,11 +62,10 @@ export default function Home() {
                         animate={{x:0, opacity:1}}
                         transition={{duration: 0.5, delay: 0.8}}>
                 <div className='intro-main'>
-                    <h1>Hi, I'm</h1>
-                    <h1>Weiran (Peter) Zou.</h1>
+                    <h1>Hi, I'm <br/>Weiran (Peter) Zou</h1>
                     <h3 className='typing-text'><span ref={typeEleRef}/></h3>
                 
-                    <p id="intro-descp">I am an enthusiastic software developer passionate about building innovative digital solutions.</p>   
+                    <p className="intro-descp">I am an enthusiastic software developer passionate about building innovative digital solutions.</p>   
                 
                     <div class="social-wrapper">
                         <motion.button
