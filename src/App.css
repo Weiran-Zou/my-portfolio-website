@@ -28,7 +28,7 @@
 }
 
 html {
-  font-size: 14px;
+
   scroll-behavior: smooth;
 }
 .App {
@@ -62,7 +62,7 @@ p {
 }
 
 h1 {
-  font-size: 2rem; 
+  font-size: 2.25rem; 
 }
 
 h2 {
@@ -112,16 +112,10 @@ h5 {
 
 
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-  p {
-    font-size: 1rem; 
-
-  }
+@media (min-width: 768px) and (max-width: 1199px) {
+ 
   h1 {
-    font-size: 2.25rem ;  
+    font-size: 2.5rem ;  
   }
   h2 {
     font-size: 2rem ;  
@@ -146,36 +140,34 @@ h5 {
  
 }
 
-/* @media (min-width: 1200px) {
-  html {
-    font-size: 16px ;
-  }
+@media (min-width: 1200px) {
+
   p {
-    font-size: 1rem; 
+    font-size: 1.125rem; 
 
   }
   h1 {
-    font-size: 3rem; 
+    font-size: 2.75rem; 
   }
 
   h2 {
-    font-size: 2.5rem; 
+    font-size: 2.25rem; 
   }
 
   h3 {
-    font-size: 2.25rem; 
+    font-size: 2rem; 
   }
   
   h4 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   h5 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .sectionHeading {
-    margin: 8rem 0;
+    margin: 6rem 0;
      
   }
  
-} */
+}
