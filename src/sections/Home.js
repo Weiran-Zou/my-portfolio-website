@@ -70,7 +70,7 @@ export default function Home() {
                 
                     <p className="intro-descp">I am an enthusiastic software developer passionate about building innovative digital solutions.</p>   
                 
-                    <div class="social-wrapper">
+                    <div className="social-wrapper">
                         <motion.button
                             style={{
                                 border,

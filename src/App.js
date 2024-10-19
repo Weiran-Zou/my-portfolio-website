@@ -5,7 +5,7 @@ import Education from "./sections/Education.js"
 import Skills from "./sections/Skills.js"
 import Projects from "./sections/Projects.js"
 import Contact from "./sections/Contact.js"
-// import Footer from "./components/Footer.js"
+import Footer from "./sections/Footer.js"
 import './App.css';
 import { SectionRefsContext } from "./context/SectionRefsContext.js"
 
@@ -21,7 +21,7 @@ function App() {
         <Skills />
         <Projects />
         <Contact />
-        {/* <Footer/> */}
+        <Footer/>
       </SectionRefsContext.Provider>
     </div>
    
