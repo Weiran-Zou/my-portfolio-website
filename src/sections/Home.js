@@ -17,12 +17,11 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import Typed from 'typed.js';
 
-// const MOTION_COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 const MOTION_COLORS = ["#281e66", "#372a8d", "#661e38", "#782443"];
 const resume_link = "https://drive.google.com/file/d/1jvlK5EDJkPZZHWLm_RPqbcUirTKgHxRm/view?usp=sharing"
 function Loader() {
     const { progress } = useProgress()
-    return <Html center>{progress.toFixed(2)} % loaded</Html>
+    return <Html center style={{fontFamily:'inherit', fontsize:'1.25rem', color:'#e3a0b8'}}>{progress.toFixed(2)} % loaded</Html>
 }
 
 export default function Home() {
