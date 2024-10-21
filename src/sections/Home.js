@@ -57,7 +57,7 @@ export default function Home() {
                     <p className="intro-descp">I am an enthusiastic software developer passionate about building innovative digital solutions.</p>   
                 
                     <div className="cta-wrapper">
-                        <motion.button
+                        <motion.a
                            
                             whileHover={{
                                 scale: 1.05,
@@ -66,12 +66,12 @@ export default function Home() {
                                 scale: 0.985,
                             }}
                             className='hire-me-btn'
-                            onClick={hireMeBtnHandler}
+                            href="#contact"
                             >
                             Hire Me
                           
                         
-                        </motion.button>
+                        </motion.a>
                         <motion.button
                             whileHover={{
                                 scale: 1.05,
