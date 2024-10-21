@@ -34,7 +34,7 @@ export default function Skills() {
                     viewport={{ once: true }}
                     transition={{duration: 0.5, delay: 0.2}}
                 > 
-                    <h2 >Frontend SKills</h2>
+                    <h3 >Frontend SKills</h3>
                     <div className="skills-row">          
                         <Skillcard src={react} skillName="React" />
                         <Skillcard src={vue} skillName="Vue" />
@@ -50,7 +50,7 @@ export default function Skills() {
                     viewport={{ once: true }}
                     transition={{duration: 0.5, delay: 0.2}}
                 > 
-                    <h2 >Backend Skills</h2>
+                    <h3 >Backend Skills</h3>
                     <div className="skills-row">          
                         <Skillcard src={node} skillName="Node" />
                         <Skillcard src={express} skillName="Express" />
@@ -64,7 +64,7 @@ export default function Skills() {
                     viewport={{ once: true }}
                     transition={{duration: 0.5, delay: 0.2}}
                 > 
-                    <h2 >Mobile Skills</h2>
+                    <h3 >Mobile Skills</h3>
                     <div className="skills-row">          
                         <Skillcard src={java} skillName="Java" />
                         <Skillcard src={reactNative} skillName="React Native" />
@@ -80,7 +80,7 @@ export default function Skills() {
                     viewport={{ once: true }}
                     transition={{duration: 0.5, delay: 0.2}}
                 > 
-                    <h2 >Tests</h2>
+                    <h3 >Tests</h3>
                     <div className="skills-row">          
                         <Skillcard src={jest} skillName="Jest" />
                     </div>

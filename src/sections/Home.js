@@ -3,18 +3,13 @@ import { Canvas } from "@react-three/fiber";
 import React, { useEffect, useContext, Suspense, useRef } from "react";
 import "./Home.css"
 import { SectionRefsContext } from '../context/SectionRefsContext';
-import {
-  useMotionTemplate,
-  useMotionValue,
-  motion,
-  animate,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import Robot from "../models/Robot"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import Typed from 'typed.js';
+import { ThemeContext } from "../context/ThemeContext";
 
-const MOTION_COLORS = ["#281e66", "#372a8d", "#661e38", "#782443"];
 const resume_link = "https://drive.google.com/file/d/1jvlK5EDJkPZZHWLm_RPqbcUirTKgHxRm/view?usp=sharing"
 function Loader() {
     const { progress } = useProgress()
@@ -22,11 +17,8 @@ function Loader() {
 }
 
 export default function Home() {
+    const theme = useContext(ThemeContext);
     const sectionRefs = useContext(SectionRefsContext);
-    const color = useMotionValue(MOTION_COLORS[0]);
-    const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #131122 50%, ${color})`;
-    const border = useMotionTemplate`1px solid ${color}`;
-    const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
     const typeEleRef = useRef(null);
 
     const hireMeBtnHandler = () => {
@@ -48,22 +40,14 @@ export default function Home() {
         };
     }, []);
     
-    useEffect(() => {
-        animate(color, MOTION_COLORS, {
-          ease: "easeInOut",
-          duration: 10,
-          repeat: Infinity,
-          repeatType: "mirror",
-        });
-      }, [color]);
     return (
         <motion.section
             id="home" 
             ref={el => sectionRefs.current.push(el)}
-            style={{backgroundImage}}
+            // style={{backgroundImage}}
         >
         
-            <motion.div id="intro-text"  initial={{x:-100, opacity:0}}
+            <motion.div id="intro-text"  initial={{x:0, opacity:0}}
                         animate={{x:0, opacity:1}}
                         transition={{duration: 0.5, delay: 0.8}}>
                 <div className='intro-main'>
@@ -89,10 +73,6 @@ export default function Home() {
                         
                         </motion.button>
                         <motion.button
-                            style={{
-                                border,
-                                boxShadow,
-                            }}
                             whileHover={{
                                 scale: 1.05,
                             }}
@@ -113,7 +93,7 @@ export default function Home() {
                
              
             </motion.div>
-            <motion.div  id='model-robot' initial={{x:100, opacity:0}}
+            <motion.div  id='model-robot' initial={{x:0, opacity:0}}
                         animate={{x:0, opacity:1}}
                         transition={{duration: 0.5, delay: 0.8}}>
                 <Canvas  camera={{ position: [0, 0, 8], fov: 75 }}>
@@ -129,11 +109,11 @@ export default function Home() {
                 
             </motion.div>
        
-            <div style={{position:"fixed", zIndex: "0px", inset: "0px"}}>
+            {theme.theme === "dark" && <div style={{position:"fixed", zIndex: "0px", inset: "0px"}}>
                 <Canvas>
                     <Stars radius={50} count={2500} factor={4} fade speed={2} />
                 </Canvas>
-            </div>
+            </div>}
         </motion.section>
     )
 }

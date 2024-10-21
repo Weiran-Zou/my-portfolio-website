@@ -22,13 +22,13 @@
 
 /* Active link style */
 #nav ul li a.active {
-    color: var(--secondary-content);
+    color: var(--primary-link);
     text-decoration: underline;
   }
   
   /* Hover effect for links */
   #nav ul li a:hover {
-    color: var(--secondary-content);
+    color: var(--primary-link);
    
 }
 

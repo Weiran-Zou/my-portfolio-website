@@ -1,16 +1,21 @@
 import React, {useState} from "react";
 import "./Header.css";
 import NavBar from "./Navbar";
-import logo from '../assets/imgs/logo.png'
+import Logo from "./Logo";
 import SideDrawer from "./SideDrawer";
 import BackDrop from "./BackDrop";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import { motion } from "framer-motion";
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faSun } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Header = () => {
     const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+    const theme = useContext(ThemeContext);
     const openDrawer  = () => {
         setDrawerIsOpen(true);
     }
@@ -32,7 +37,7 @@ const Header = () => {
                     <span />
                     <span />
                 </button>
-                <a href="#home" className="logo" ><img src={logo} alt="..."></img></a>
+                <Logo theme={theme.theme}/>
                 <div className="main-nav">
                     <NavBar/>
                 </div>
@@ -55,6 +60,16 @@ const Header = () => {
                     
                         target="_blank">
                         <FontAwesomeIcon icon={faGithub} size="2xl" className='social-icon'/>
+                    </motion.a>
+                    <motion.a 
+                        whileHover={{
+                            scale: 1.15,
+                        }} 
+                        onClick={() => {theme.toggleTheme()}}
+                        >
+                        {theme.theme === "dark" ? 
+                            <FontAwesomeIcon icon={faSun} size="2xl" className='social-icon'/>:
+                            <FontAwesomeIcon icon={faMoon} size="2xl" className='social-icon'/>}
                     </motion.a>
                 
                 </div> 

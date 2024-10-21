@@ -7,15 +7,15 @@
 }
 
 :root {
-  --primary: #281e66;
-  --primary-content: #a9a0e3;
-  --primary-dark: #19123f;
-  --primary-light: #372a8d;
+  --primary: #8338ec;
+  --primary-dark: #6815dc;
+  --primary-light: #c77dff;
+  --primary-link:#c77dff;
+  --primary-hover:#6815dc;
 
-  --secondary: #661e38;
-  --secondary-content: #e3a0b8;
-  --secondary-dark: #3f1222;
-  --secondary-light: #782443;
+  --secondary:#ec4738;
+  --secondary-dark: #ee297c;
+  --secondary-light: #f687b6;
 
   --background: #131122;
   --foreground: #1d1934;
@@ -27,6 +27,29 @@
 
   --error-content: #e3a0a0;
 }
+
+[data-theme="light"] {
+  --primary: #c77dff;
+  --primary-dark: #6815dc;
+  --primary-light: #c77dff;
+  --primary-link:#6815dc;
+  --primary-hover:#B16FE3;
+
+  --secondary:#dc2615;
+  --secondary-dark: #C22164;
+  --secondary-light: #f25899;
+
+  --background: #fafafd;
+  --foreground: #eceaf5;
+  --border: #d7d4ea;
+
+  --text: #1d1934;
+  --text-light: #4c428a;
+  --text-lighter: #6f64b4;
+
+  --error-content: #e3a0a0;
+}
+
 
 html {
   scroll-behavior: smooth;

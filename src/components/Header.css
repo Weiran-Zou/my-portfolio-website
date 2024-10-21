@@ -6,11 +6,13 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    background: var(--primary);
+    background: var(--foreground);
+    border-bottom: 1px solid var(--border);
     margin: 0;
     padding: 0;
     z-index: 9999;
     padding: 0 1.5rem;
+
   }
 
 .main-nav {
@@ -33,22 +35,8 @@
     display: block;
     width: 2rem;
     height: 2.5px;
-    background: white;
+    background:var(--text);
 }
-
-.logo {
-    max-height: 70px;
-    
-    img {
-       
-        width: 100%;
-        height: auto; 
-        object-fit: cover;
-        max-height: 70px; 
-        
-    }
-}
-
 
 .nav-social-wrapper {
     display: flex;
@@ -63,12 +51,12 @@
 
 .social-icon {
     color: var(--text);
-    background-color: var(--primary);
+    background-color: var(--background);
   
 }
 
 .nav-social-wrapper a :hover {
-    color: var(--secondary-content);
+    color: var(--primary-link);
     
    
 }

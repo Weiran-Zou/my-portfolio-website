@@ -13,8 +13,8 @@
     text-align: center;
     border-radius: 8px;
 }
-.skills-item h2 {
-    color: var(--secondary-content);
+.skills-item h3 {
+    color: var(--secondary);
     text-align: left;
 }
 .skills-row {
