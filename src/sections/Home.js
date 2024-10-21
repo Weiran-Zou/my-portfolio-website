@@ -1,4 +1,3 @@
-import '../App.css'
 import { Stars, OrbitControls,  Html, useProgress } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { useEffect, useContext, Suspense, useRef } from "react";

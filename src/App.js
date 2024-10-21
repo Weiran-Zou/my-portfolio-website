@@ -6,12 +6,12 @@ import Skills from "./sections/Skills.js"
 import Projects from "./sections/Projects.js"
 import Contact from "./sections/Contact.js"
 import Footer from "./sections/Footer.js"
-import './App.css';
 import { SectionRefsContext } from "./context/SectionRefsContext.js"
 
 function App() {
   const sectionRefs = useRef([]);
   return (
+    
       <SectionRefsContext.Provider value={sectionRefs}>
         <Header />
         <Home />
@@ -21,6 +21,7 @@ function App() {
         <Contact />
         <Footer/>
       </SectionRefsContext.Provider> 
+    
   );
 }
 

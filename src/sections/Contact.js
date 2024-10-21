@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { SectionRefsContext } from '../context/SectionRefsContext';
 import Input from "../components/formElements/Input"
 import * as Yup from "yup";
+import SectionHeading from "../components/SectionHeading"
 
 const validationSchema = Yup.object({
   name: Yup.string()
@@ -81,17 +82,7 @@ export default function Contact() {
       <section 
         id="contact" 
         ref={el => sectionRefs.current.push(el)}>
-          <motion.div 
-              className="sectionHeading" 
-              initial={{y:200, opacity:0}}
-              whileInView={{y:0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{duration: 0.5, delay: 0.2}}
-            >
-              <h1 className="sectionName" >Contact Me</h1>
-              <div className="divider" ></div>
-          </motion.div>
-        
+          <SectionHeading name="Contact Me"/>
           <div className="contanct-container">
             <motion.div  
               id="myContact" 

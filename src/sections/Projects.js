@@ -7,6 +7,7 @@ import { useContext } from "react"
 import "./Projects.css"
 import Project from "./Project";
 import { SectionRefsContext } from '../context/SectionRefsContext';
+import SectionHeading from "../components/SectionHeading";
 
 const projects = [
     {
@@ -46,16 +47,7 @@ export default function Projects() {
             id="projects" 
             ref={el => sectionRefs.current.push(el)}
         >
-            <motion.div 
-              className="sectionHeading" 
-              initial={{y:200, opacity:0}}
-              whileInView={{y:0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{duration: 0.5, delay: 0.2}}
-            >
-                <h1 className="sectionName">My Projects</h1>
-                <div className="divider" ></div>
-            </motion.div>
+            <SectionHeading name="My Projects"/>
             <div className="projects-container" >
                 {projects.map(item => (
                      <motion.div

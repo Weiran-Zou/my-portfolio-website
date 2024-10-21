@@ -16,6 +16,7 @@ import firebase from '../assets/imgs/icons8-firebase.svg'
 import jest from '../assets/imgs/icons8-jest-96.png'
 import './Skills.css'
 import { SectionRefsContext } from '../context/SectionRefsContext';
+import SectionHeading from "../components/SectionHeading";
 
 export default function Skills() {
     const sectionRefs = useContext(SectionRefsContext);
@@ -24,17 +25,8 @@ export default function Skills() {
             id="skills" 
             ref={el => sectionRefs.current.push(el)}
         >
-            <motion.div 
-                className="sectionHeading" 
-                initial={{y:200, opacity:0}}
-                whileInView={{y:0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{duration: 0.5, delay: 0.2}}
-            >
-                <h1 className="sectionName">Skills Profile</h1>
-                <div className="divider" ></div>
-            </motion.div>
-                <div className="skills-container">
+            <SectionHeading name="Skills Profile"/>
+            <div className="skills-container">
                 <motion.div 
                     className="skills-item"  
                     initial={{y:200, opacity:0}}

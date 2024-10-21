@@ -6,6 +6,7 @@ import qutLogo from "../assets/imgs/qut-logo.png"
 import { motion } from "framer-motion"
 import "./Education.css"
 import { SectionRefsContext } from '../context/SectionRefsContext';
+import SectionHeading from "../components/SectionHeading";
 
 export default function Education() {
     const sectionRefs = useContext(SectionRefsContext);
@@ -13,16 +14,7 @@ export default function Education() {
         <section
             id="education" 
             ref={el => sectionRefs.current.push(el)}>
-            <motion.div 
-              className="sectionHeading" 
-              initial={{y:200, opacity:0}}
-              whileInView={{y:0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{duration: 0.5, delay: 0.2}}
-            >
-                <h1 className="sectionName">Education</h1>
-                <div className="divider" ></div>
-            </motion.div>
+            <SectionHeading name="Education"/>
             <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
