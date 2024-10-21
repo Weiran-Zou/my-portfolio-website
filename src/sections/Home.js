@@ -12,8 +12,6 @@ import {
 } from "framer-motion";
 import Robot from "../models/Robot"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
-import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import Typed from 'typed.js';
 
@@ -31,6 +29,11 @@ export default function Home() {
     const border = useMotionTemplate`1px solid ${color}`;
     const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
     const typeEleRef = useRef(null);
+
+    const hireMeBtnHandler = () => {
+        const contactRef = sectionRefs.current.filter((section) => section.id === "contact")[0];
+        contactRef.scrollIntoView({ behavior: 'smooth' }); 
+    }
 
     useEffect(() => {
         const typed = new Typed(typeEleRef.current, {
@@ -70,7 +73,22 @@ export default function Home() {
                 
                     <p className="intro-descp">I am an enthusiastic software developer passionate about building innovative digital solutions.</p>   
                 
-                    <div className="social-wrapper">
+                    <div className="cta-wrapper">
+                        <motion.button
+                           
+                            whileHover={{
+                                scale: 1.05,
+                            }}
+                            whileTap={{
+                                scale: 0.985,
+                            }}
+                            className='hire-me-btn'
+                            onClick={hireMeBtnHandler}
+                            >
+                            Hire Me
+                          
+                        
+                        </motion.button>
                         <motion.button
                             style={{
                                 border,
@@ -85,30 +103,11 @@ export default function Home() {
                             className='resume-btn'
                             onClick={e => window.open(resume_link, "_blank")}
                             >
-                            Download Resume
+                            Download CV
                             <FontAwesomeIcon icon={faArrowRight} className='arrow-icon'/>
                         
                         </motion.button>
-                        
-                        <motion.a  
-                            whileHover={{
-                                scale: 1.15,
-                            }} 
-                            href="https://www.linkedin.com/in/weiran-zou-239b6419a/" 
-                            aria-label="Linkedin" target="_blank">
-                            <FontAwesomeIcon icon={faLinkedin}  size="2xl" className='social-icon'/>
-                        </motion.a>
-                        <motion.a 
-                            whileHover={{
-                                scale: 1.15,
-                            }} 
-                            href="https://github.com/Weiran-Zou" 
-                            aria-label="Github" 
-                        
-                            target="_blank">
-                            <FontAwesomeIcon icon={faGithub} size="2xl" className='social-icon'/>
-                        </motion.a>
-                    
+                       
                     </div> 
                 </div>
 

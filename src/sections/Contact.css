@@ -1,5 +1,5 @@
 #contact {
-    padding: 2rem 1.5rem;
+    padding: 2rem;
     z-index: 1;
 }
 .contanct-container{
@@ -16,7 +16,7 @@
     max-width: 600px; 
     z-index: 1;
     gap: 2rem;
-    padding: 0 2rem;
+    
     
 }
 #contactInfo {
