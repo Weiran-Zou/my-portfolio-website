@@ -1,13 +1,130 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary: #281e66;
+  --primary-content: #a9a0e3;
+  --primary-dark: #19123f;
+  --primary-light: #372a8d;
+
+  --secondary: #661e38;
+  --secondary-content: #e3a0b8;
+  --secondary-dark: #3f1222;
+  --secondary-light: #782443;
+
+  --background: #131122;
+  --foreground: #1d1934;
+  --border: #302956;
+
+  --text: #fafafd;
+  --text-light: #cfcbe6;
+  --text-lighter: #8f87c5;
+
+  --error-content: #e3a0a0;
+}
+
+html {
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins',  sans-serif;
+  background-color:var(--background); 
+  color: var(--text);
+ 
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 1.125rem;
+}
+a {
+  cursor: pointer;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6; 
+}
+
+h1 {
+  font-size: 2.25rem; 
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem ;
+}
+
+h4 {
+  font-size: 1.25rem ;
+
+}
+
+h5 {
+  font-size: 1.125rem ;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+ 
+  h1 {
+    font-size: 2.5rem ;  
+  }
+  h2 {
+    font-size: 2rem ;  
+  }
+  h3 {
+    font-size: 1.75rem ;  
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.25rem ;
+  }
+
+
+ 
+}
+
+@media (min-width: 1200px) {
+
+  p {
+    font-size: 1.125rem; 
+
+  }
+  h1 {
+    font-size: 2.75rem; 
+  }
+
+  h2 {
+    font-size: 2.25rem; 
+  }
+
+  h3 {
+    font-size: 2rem; 
+  }
+  
+  h4 {
+    font-size: 1.75rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+ 
 }

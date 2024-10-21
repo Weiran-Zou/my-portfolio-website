@@ -12,8 +12,6 @@ import { SectionRefsContext } from "./context/SectionRefsContext.js"
 function App() {
   const sectionRefs = useRef([]);
   return (
-    
-    <div id="body" >
       <SectionRefsContext.Provider value={sectionRefs}>
         <Header />
         <Home />
@@ -22,10 +20,7 @@ function App() {
         <Projects />
         <Contact />
         <Footer/>
-      </SectionRefsContext.Provider>
-    </div>
-   
-    
+      </SectionRefsContext.Provider> 
   );
 }
 

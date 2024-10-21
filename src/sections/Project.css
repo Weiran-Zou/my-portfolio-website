@@ -58,6 +58,7 @@
     top: 15vh !important;
     background-color: var(--background);
     color: white;
+    
     .card-body{
         display: flex;
         flex-direction: column;

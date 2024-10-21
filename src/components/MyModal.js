@@ -7,16 +7,16 @@ const ModalOverlay = (props) => {
     const content = (
         <div className={`my-modal ${props.className}`} style={props.style}>
             <header className={`my-modal__header ${props.headerClass}`}>
-                <h2>{props.header}</h2>
+                <h3>{props.header}</h3>
                 <button class="my-modal__close-btn" onClick={props.onCancel}>×</button>
             </header>
             <form onSubmit={props.onSubmit ? props.onSubmit : event => event.preventDefault}>
                 <div className={`my-modal__content ${props.contentClass}`}>
                     {props.children}
                 </div>
-                <footer className={`my-modal__footer ${props.footerClass}`}>
+                <div className={`my-modal__footer ${props.footerClass}`}>
                     {props.footer}
-                </footer>
+                </div>
             </form>
 
         </div>

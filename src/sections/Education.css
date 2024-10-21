@@ -22,7 +22,11 @@
     font-style: italic;
   
 }
-
+.education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 .achievement-wrapper {
     color: var(--text-light)
 }

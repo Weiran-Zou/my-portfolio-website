@@ -35,13 +35,15 @@ export default function Education() {
                         </div>
                     }
                 >
-                    <h4 >Master of Information Technology</h4>
-                    <h5 >The University of Melbourne</h5>
-                    <div className="achievement-wrapper">
-                        <p>Achievements</p>
-                        <ul className="achievemets-list">
-                            <li>Awarded Melbourne Graduate Scholarship - 2022</li>
-                        </ul>
+                    <div className="education-content">
+                        <h4 >Master of Information Technology</h4>
+                        <h5 >The University of Melbourne</h5>
+                        <div className="achievement-wrapper">
+                            <p>Achievements</p>
+                            <ul className="achievemets-list">
+                                <li>Awarded Melbourne Graduate Scholarship - 2022</li>
+                            </ul>
+                        </div>
                     </div>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
@@ -55,15 +57,17 @@ export default function Education() {
                         </div>
                     }
                 >
-                    <h4>Bachelor of Information Tehnology (Computer science)</h4>
-                    <h5>Queensland University of Technology</h5>
-                    
-                    <div className="achievement-wrapper">
-                        <p>Achievements</p>
-                        <ul className="achievemets-list">
-                            <li>GPA of 6.792 out of 7</li>
-                            <li>Dean’s List Award (2020 & 2021)</li>
-                        </ul>
+                    <div className="education-content">
+                        <h4>Bachelor of Information Tehnology (Computer science)</h4>
+                        <h5>Queensland University of Technology</h5>
+                        
+                        <div className="achievement-wrapper">
+                            <p>Achievements</p>
+                            <ul className="achievemets-list">
+                                <li>GPA of 6.792 out of 7</li>
+                                <li>Dean’s List Award (2020 & 2021)</li>
+                            </ul>
+                        </div>
                     </div>
                 </VerticalTimelineElement>
         

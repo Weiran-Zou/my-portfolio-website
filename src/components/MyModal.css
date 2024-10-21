@@ -9,13 +9,14 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     border-radius: 8px;
     overflow-y: auto;
+    height: 90vh;
   }
   
   .my-modal__header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 1rem 0.5rem;
+    padding: 1rem;
     background: var(--primary);
     color: var(--text);
   }
@@ -23,12 +24,12 @@
   .my-modal__close-btn {
     background: var(--primary);
     color: var(--text);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     border: none;
   }
 
-  .my-modal__header h2 {
+  .my-modal__header h3 {
     margin: 0.5rem;
   }
   
