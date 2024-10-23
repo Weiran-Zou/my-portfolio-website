@@ -39,10 +39,10 @@
     }
     .techList li {
         display: inline-block;
-        padding: 0.3rem 0.5rem;
-        color: var(--text);
+        padding: 5px 10px;
+        color: var(--primary-light);
         border-radius: 15px;
-        background-color: var(--primary)
+        background-color: var(--foreground-light); 
     }
     .card-text {
         -webkit-line-clamp: 3;
@@ -72,7 +72,7 @@
         margin-top: 1rem;
         list-style: none;
         padding: 0;
-        color: var(--text-light);
+        color: var(--primary-light);
         align-items: left;
         font-size:  1rem
     }
@@ -111,10 +111,9 @@
     position: absolute;
     bottom: 30%;
     padding: 10px 20px; 
-    color: var(--text);
+    color: var(--primary-content);
     background-color: var(--primary);
     font-weight: bold;
-
     border: none;
     border-radius: 5px;
 }
@@ -129,7 +128,7 @@
 }
 
 .overlay button:hover {
-    background-color: var(--primary-hover)
+    background-color: var(--primary-dark)
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {

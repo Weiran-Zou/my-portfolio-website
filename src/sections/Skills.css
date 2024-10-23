@@ -14,7 +14,7 @@
     border-radius: 8px;
 }
 .skills-item h3 {
-    color: var(--secondary);
+    color: var(--primary-light);
     text-align: left;
 }
 .skills-row {

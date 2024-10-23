@@ -23,7 +23,7 @@
 #contactInfo {
     text-align:left;
     h2 {
-        color: var(--secondary);
+        color: var(--primary-light);
     }
     p {
         line-height: 1.75rem;
@@ -47,7 +47,7 @@
 }
 
 .contact-icon {
-    color: var(--secondary);
+    color: var(--secondary-light);
 }
     
 #contactForm-container{
@@ -74,7 +74,7 @@
 }
 
 #contactForm h5 {
-    color: var(--secondary)
+    color: var(--primary-light)
 }
 
 .contact-btn {
@@ -83,14 +83,14 @@
     font-size:20px;
     padding:1rem 0;
     background-color:var(--primary);
-    color: var(--text);
+    color: var(--primary-content);
     border:none;
     margin-top: 1rem;
 
 }
 
 .contact-btn:hover {
-    background-color:var(--primary-hover);
+    background-color:var(--primary-dark);
 }
 
 
