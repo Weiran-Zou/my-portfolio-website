@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio-website/static/css/main.64ea389b.css",
-    "main.js": "/my-portfolio-website/static/js/main.98331f5a.js",
+    "main.css": "/my-portfolio-website/static/css/main.85a4bb9c.css",
+    "main.js": "/my-portfolio-website/static/js/main.5021f108.js",
     "static/js/453.bb257cf5.chunk.js": "/my-portfolio-website/static/js/453.bb257cf5.chunk.js",
     "static/media/robot_playground.glb": "/my-portfolio-website/static/media/robot_playground.fb70b1ffff90e9c1b42b.glb",
     "static/media/Foodies.png": "/my-portfolio-website/static/media/Foodies.25dbde031543822528c3.png",
@@ -9,8 +9,8 @@
     "static/media/Stocks-Application-1.PNG": "/my-portfolio-website/static/media/Stocks-Application-1.f32b24bb5a11960ac0c4.PNG",
     "static/media/unimelb-logo.jpg": "/my-portfolio-website/static/media/unimelb-logo.21b405c771043a126107.jpg",
     "static/media/Virtual-doctor-book-appointment.png": "/my-portfolio-website/static/media/Virtual-doctor-book-appointment.02fb78079d590a5a0668.png",
-    "static/media/logo-dark.png": "/my-portfolio-website/static/media/logo-dark.19c10c8e4c0c2f5b2637.png",
-    "static/media/logo-light.png": "/my-portfolio-website/static/media/logo-light.8028ac9549afa045bcb1.png",
+    "static/media/logo-dark.png": "/my-portfolio-website/static/media/logo-dark.7226b3f1cf03f6b3bb57.png",
+    "static/media/logo-light.png": "/my-portfolio-website/static/media/logo-light.671d42100aa1de177d57.png",
     "static/media/icons8-mysql.svg": "/my-portfolio-website/static/media/icons8-mysql.a8284e85766ab39772f8363b52b187d4.svg",
     "static/media/icons8-android-studio.svg": "/my-portfolio-website/static/media/icons8-android-studio.2379d1819b3045500904804227c121e2.svg",
     "static/media/icons8-react.svg": "/my-portfolio-website/static/media/icons8-react.9342c38419495e33d129b6e97166cd00.svg",
@@ -24,12 +24,12 @@
     "static/media/icons8-css.svg": "/my-portfolio-website/static/media/icons8-css.db7dfd1247623e1e9223d8ef28a37432.svg",
     "static/media/icons8-html.svg": "/my-portfolio-website/static/media/icons8-html.a026abbb678246d70ee9b70e4aee972c.svg",
     "static/media/icons8-vue-js.svg": "/my-portfolio-website/static/media/icons8-vue-js.6d7684efd638278d1af0d12e903b4e18.svg",
-    "main.64ea389b.css.map": "/my-portfolio-website/static/css/main.64ea389b.css.map",
-    "main.98331f5a.js.map": "/my-portfolio-website/static/js/main.98331f5a.js.map",
+    "main.85a4bb9c.css.map": "/my-portfolio-website/static/css/main.85a4bb9c.css.map",
+    "main.5021f108.js.map": "/my-portfolio-website/static/js/main.5021f108.js.map",
     "453.bb257cf5.chunk.js.map": "/my-portfolio-website/static/js/453.bb257cf5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.64ea389b.css",
-    "static/js/main.98331f5a.js"
+    "static/css/main.85a4bb9c.css",
+    "static/js/main.5021f108.js"
   ]
 }
