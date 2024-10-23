@@ -28,7 +28,7 @@
    transform: rotateY(-180deg);
    font-size: 1.2rem;
    font-weight: 600;
-   color: var(--secondary-light);
+   color: var(--secondary);
 }
 
 #skill-card:hover .skill-card__front {
