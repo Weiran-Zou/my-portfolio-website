@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Navbar.css'
-import { SectionRefsContext } from '../context/SectionRefsContext';
+import { SectionRefsContext } from '../../context/SectionRefsContext';
 
 export default function NavBar() {
     const [activeSection, setActiveSection] = useState('home');
