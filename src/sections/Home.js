@@ -10,7 +10,7 @@ import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import Typed from 'typed.js';
 import { ThemeContext } from "../context/ThemeContext";
 
-const resume_link = "https://drive.google.com/file/d/1q_mgDfnWpewj5Jwp2zfbUKfbqKCNuV92/view?usp=drive_link"
+const resume_link = "https://drive.google.com/file/d/15nW2g3NXnXATP4019SLwYDEZfnt7mjBm/view?usp=drive_link"
 function Loader() {
     const { progress } = useProgress()
     return <Html center style={{fontFamily:'inherit', fontsize:'1.25rem', color:'var(--primary-light)'}}>{progress.toFixed(2)} % loaded</Html>
@@ -20,11 +20,6 @@ export default function Home() {
     const theme = useContext(ThemeContext);
     const sectionRefs = useContext(SectionRefsContext);
     const typeEleRef = useRef(null);
-
-    const hireMeBtnHandler = () => {
-        const contactRef = sectionRefs.current.filter((section) => section.id === "contact")[0];
-        contactRef.scrollIntoView({ behavior: 'smooth' }); 
-    }
 
     useEffect(() => {
         const typed = new Typed(typeEleRef.current, {

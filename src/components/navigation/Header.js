@@ -32,15 +32,18 @@ const Header = () => {
                 </nav>
             </SideDrawer>)}
             <header className="header">
-                <button className="nav-menu-btn" onClick={openDrawer} >
-                    <span />
-                    <span />
-                    <span />
-                </button>
-                <Logo theme={theme.theme}/>
+                <div className="left-nav">
+                    <button className="nav-menu-btn" onClick={openDrawer} >
+                        <span />
+                        <span />
+                        <span />
+                    </button>
+                    <Logo theme={theme.theme} />
+                </div>
                 <div className="main-nav">
                     <NavBar/>
                 </div>
+                
                 <div className="nav-social-wrapper">
     
                     <motion.a  
@@ -49,7 +52,7 @@ const Header = () => {
                         }} 
                         href="https://www.linkedin.com/in/weiran-zou-239b6419a/" 
                         aria-label="Linkedin" target="_blank">
-                        <FontAwesomeIcon icon={faLinkedin}  size="2xl" className='social-icon'/>
+                        <FontAwesomeIcon icon={faLinkedin}  className='social-icon'/>
                     </motion.a>
                     <motion.a 
                         whileHover={{
@@ -59,7 +62,7 @@ const Header = () => {
                         aria-label="Github" 
                     
                         target="_blank">
-                        <FontAwesomeIcon icon={faGithub} size="2xl" className='social-icon'/>
+                        <FontAwesomeIcon icon={faGithub} className='social-icon'/>
                     </motion.a>
                     <motion.a 
                         whileHover={{
@@ -68,8 +71,8 @@ const Header = () => {
                         onClick={() => {theme.toggleTheme()}}
                         >
                         {theme.theme === "dark" ? 
-                            <FontAwesomeIcon icon={faSun} size="2xl" className='social-icon'/>:
-                            <FontAwesomeIcon icon={faMoon} size="2xl" className='social-icon'/>}
+                            <FontAwesomeIcon icon={faSun} className='social-icon'/>:
+                            <FontAwesomeIcon icon={faMoon} className='social-icon'/>}
                     </motion.a>
                 
                 </div> 
