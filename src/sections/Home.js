@@ -42,7 +42,7 @@ export default function Home() {
             // style={{backgroundImage}}
         >
         
-            <motion.div id="intro-text"  initial={{x:0, opacity:0}}
+            <motion.div id="intro-text"  initial={{x:-100, opacity:0}}
                         animate={{x:0, opacity:1}}
                         transition={{duration: 0.5, delay: 0.8}}>
                 <div className='intro-main'>
@@ -88,7 +88,7 @@ export default function Home() {
                
              
             </motion.div>
-            <motion.div  id='model-robot' initial={{x:0, opacity:0}}
+            <motion.div  id='model-robot' initial={{x:100, opacity:0}}
                         animate={{x:0, opacity:1}}
                         transition={{duration: 0.5, delay: 0.8}}>
                 <Canvas  camera={{ position: [0, 0, 8], fov: 75 }}>

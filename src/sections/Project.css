@@ -55,7 +55,7 @@
 }
 
 .project-details-modal {
-    top: 15vh !important;
+    top: 5vh !important;
     background-color: var(--background);
     color: var(--text);
     
