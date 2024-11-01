@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/my-portfolio-website/static/css/main.a90e48e2.css",
-    "main.js": "/my-portfolio-website/static/js/main.b7a143bd.js",
+    "main.js": "/my-portfolio-website/static/js/main.fb77aae0.js",
     "static/js/453.bb257cf5.chunk.js": "/my-portfolio-website/static/js/453.bb257cf5.chunk.js",
     "static/media/robot_playground.glb": "/my-portfolio-website/static/media/robot_playground.fb70b1ffff90e9c1b42b.glb",
     "static/media/Foodies.png": "/my-portfolio-website/static/media/Foodies.25dbde031543822528c3.png",
-    "static/media/place-sharing-home.png": "/my-portfolio-website/static/media/place-sharing-home.1e220e17ce73d022b011.png",
+    "static/media/place-sharing-home.png": "/my-portfolio-website/static/media/place-sharing-home.ae0dd80b3d3571301e1a.png",
     "static/media/Discount-Application-resized.png": "/my-portfolio-website/static/media/Discount-Application-resized.60fd162b767483c686d5.png",
     "static/media/Stocks-Application-1.PNG": "/my-portfolio-website/static/media/Stocks-Application-1.f32b24bb5a11960ac0c4.PNG",
     "static/media/unimelb-logo.jpg": "/my-portfolio-website/static/media/unimelb-logo.21b405c771043a126107.jpg",
@@ -26,11 +26,11 @@
     "static/media/icons8-html.svg": "/my-portfolio-website/static/media/icons8-html.a026abbb678246d70ee9b70e4aee972c.svg",
     "static/media/icons8-vue-js.svg": "/my-portfolio-website/static/media/icons8-vue-js.6d7684efd638278d1af0d12e903b4e18.svg",
     "main.a90e48e2.css.map": "/my-portfolio-website/static/css/main.a90e48e2.css.map",
-    "main.b7a143bd.js.map": "/my-portfolio-website/static/js/main.b7a143bd.js.map",
+    "main.fb77aae0.js.map": "/my-portfolio-website/static/js/main.fb77aae0.js.map",
     "453.bb257cf5.chunk.js.map": "/my-portfolio-website/static/js/453.bb257cf5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a90e48e2.css",
-    "static/js/main.b7a143bd.js"
+    "static/js/main.fb77aae0.js"
   ]
 }
