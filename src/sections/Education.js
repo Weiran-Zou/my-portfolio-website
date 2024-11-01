@@ -29,6 +29,7 @@ export default function Education() {
                         <div className="achievement-wrapper">
                             <p>Achievements</p>
                             <ul className="achievemets-list">
+                                <li>WAM of 77.417 (H2A - Second Class Honours)</li>
                                 <li>Awarded Melbourne Graduate Scholarship - 2022</li>
                             </ul>
                         </div>

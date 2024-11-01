@@ -10,7 +10,7 @@ import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import Typed from 'typed.js';
 import { ThemeContext } from "../context/ThemeContext";
 
-const resume_link = "https://drive.google.com/file/d/15nW2g3NXnXATP4019SLwYDEZfnt7mjBm/view?usp=drive_link"
+const resume_link = "https://drive.google.com/file/d/1BwXRDeYcXZerqDmCX-VUbbj40mammC51/view?usp=drive_link"
 function Loader() {
     const { progress } = useProgress()
     return <Html center style={{fontFamily:'inherit', fontsize:'1.25rem', color:'var(--primary-light)'}}>{progress.toFixed(2)} % loaded</Html>

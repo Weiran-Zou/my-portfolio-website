@@ -14,7 +14,7 @@ const projects = [
     {
         id: "1",
         title: "PlaceShare MERN App",
-        description: "A MERN stack app for sharing places, featuring user authentication, place displays, uploads, editing and deletion, and location viewing via Google Maps. The backend includes RESTful API endpoints, JWT-based authentication, MongoDB with Mongoose, and Cloudinary for image uploads.",
+        description: "A MERN stack app for sharing places, featuring user authentication, user profile, place display and upload, and location viewing via Google Maps API. The backend includes RESTful API endpoints, JWTbased authentication, MongoDB with Mongoose, and Cloudinary for image uploads.",
         tech: ["React", "Express.js", "Node.js", "MongoDB", "Mongoose", "Cloudinary"],
         img: placeImg
     },
