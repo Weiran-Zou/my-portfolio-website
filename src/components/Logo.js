@@ -1,5 +1,5 @@
-import logoDark from '../assets/imgs/logo-dark.png'
-import logoLight from '../assets/imgs/logo-light.png'
+import logoDark from '../assets/imgs/logo/logo-dark.png'
+import logoLight from '../assets/imgs/logo/logo-light.png'
 import "./Logo.css"
 export default function Logo(props) {
     return (

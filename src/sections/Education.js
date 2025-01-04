@@ -1,9 +1,8 @@
 import { useContext } from "react"
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import unimelbLogo from '../assets/imgs/unimelb-logo.jpg'
-import qutLogo from "../assets/imgs/qut-logo.png"
-import { color, motion } from "framer-motion"
+import unimelbLogo from '../assets/imgs/logo/unimelb-logo.jpg'
+import qutLogo from "../assets/imgs/logo/qut-logo.png"
 import "./Education.css"
 import { SectionRefsContext } from '../context/SectionRefsContext';
 import SectionHeading from "../components/SectionHeading";
