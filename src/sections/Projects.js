@@ -17,14 +17,16 @@ const projects = [
     title: "Weather App",
     description: "A project written in React Native displaying current weather and weather forecasts for the user-selected location using data from the OpenWeather API.",
     tech: ["React Native", "Expo", "Expo SQLite", "Expo Location", "OpenWeather API", "GooglePlacesAutocomplete library"],
-    img: weatherImg
+    img: weatherImg,
+    github: "https://github.com/Weiran-Zou/weather-app"
   },
   {
     id: "2",
     title: "PlaceShare MERN App",
     description: "A MERN stack application for sharing places, featuring user authentication, user profiles, place display and upload, place liking, and location viewing via Google Maps API. The backend includes RESTful API endpoints, JWTbased authentication, MongoDB with Mongoose, and Cloudinary for image uploads.",
     tech: ["React", "Express.js", "Node.js", "MongoDB", "Mongoose", "Cloudinary"],
-    img: placeImg
+    img: placeImg,
+    github: "https://github.com/Weiran-Zou/mern-places-sharing-frontend"
   },
   {
     id: "3",
