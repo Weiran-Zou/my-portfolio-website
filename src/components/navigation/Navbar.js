@@ -5,7 +5,7 @@ import { SectionRefsContext } from '../../context/SectionRefsContext';
 export default function NavBar() {
     const [activeSection, setActiveSection] = useState('home');
     const sectionRefs = useContext(SectionRefsContext);
-    const sectionsName = ['home', 'education', 'skills', 'projects', 'contact'];
+    const sectionsName = ['home', 'work', 'education', 'skills', 'projects', 'contact'];
 
     useEffect(() => {
 

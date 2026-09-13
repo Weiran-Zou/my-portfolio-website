@@ -1,0 +1,48 @@
+#work {
+    padding: 2rem;
+}
+
+.work-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.work-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.work-content .work-location {
+    font-size: 0.875rem;
+    margin: 0;
+    color: var(--text-lighter);
+}
+
+.work-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 1.25rem;
+    color: var(--text-light);
+}
+
+.work-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    list-style: none;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+.work-tech li {
+    padding: 5px 10px;
+    color: var(--primary-light);
+    border-radius: 15px;
+    background-color: var(--foreground-light);
+}

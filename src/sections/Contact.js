@@ -106,7 +106,7 @@ export default function Contact() {
             
               <div class="social-card-wrapper">
                 <FontAwesomeIcon icon={faLocationDot} size="2xl" className="contact-icon"/>
-                <span class="social-card-text">Malvern, VIC, Australia</span>
+                <span class="social-card-text">Melbourne, VIC, Australia</span>
               </div>
           
             
