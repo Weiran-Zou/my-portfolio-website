@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react"
 import Header from "./components/navigation/Header.js"
 import Home from "./sections/Home.js"
+import Work from "./sections/Work.js"
 import Education from "./sections/Education.js"
 import Skills from "./sections/Skills.js"
 import Projects from "./sections/Projects.js"
@@ -26,6 +27,7 @@ function App() {
       <SectionRefsContext.Provider value={sectionRefs}>
         <Header />
         <Home />
+        <Work />
         <Education /> 
         <Skills />
         <Projects />
