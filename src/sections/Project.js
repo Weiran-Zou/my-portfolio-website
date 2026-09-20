@@ -37,8 +37,9 @@ const Project = ({item}) => {
           <p className="card-text">{item.description}</p>
           {item.github && <a
             href={item.github}
-            aria-label="Github" 
-            target="_blank">
+            aria-label="Github"
+            target="_blank"
+            rel="noreferrer">
             <FontAwesomeIcon icon={faGithub} className='project-github'/>
           </a> }
         </div>
@@ -69,8 +70,9 @@ const Project = ({item}) => {
         {item.github && <a    
           onClick={(e) => e.stopPropagation()}
           href={item.github}
-          aria-label="Github" 
-          target="_blank">
+          aria-label="Github"
+          target="_blank"
+          rel="noreferrer">
           <FontAwesomeIcon icon={faGithub} className='project-github'/>
         </a> }
        
