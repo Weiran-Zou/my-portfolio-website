@@ -1,59 +1,32 @@
 #projects {
     padding-left: 1rem;
     padding-right: 1rem;
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;  
-    justify-content: center;
     align-items: center;
-    
 }
 .projects-container {
-    display: flex; 
-    flex-direction: column;
-    flex-wrap: wrap;  
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 2rem;
-}
-.project-wrapper{
-    width: calc(100% - 1rem);
-    max-width: 330px;
-    margin: 0.5rem;
+    width: 100%;
+    /* keep single-column cards from stretching too wide on large phones */
+    max-width: 420px;
 }
 
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   #projects {
       padding-left: 2rem;
       padding-right: 2rem;
   }
-  .projects-container{
-      flex-direction: row;
-      width: 100%;
+  .projects-container {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 1200px;
   }
-  .project-wrapper{
-      width: calc(50% - 2rem);
-      /* width: 330px; */
-      height: auto;
-  }
-   
-
-    
 }
 
 @media (min-width: 1280px) {
-    #projects {
-        padding-left: 3rem;
-        padding-right: 3rem;
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr);
     }
-    .projects-container{
-        flex-direction: row;
-        width: 80%;
-    }
-    .project-wrapper{
-        width: calc(33% - 2rem);
-        /* width: 330px; */
-        height: auto;
-    }
-
-    
 }
