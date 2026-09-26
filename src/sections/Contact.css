@@ -1,114 +1,102 @@
 #contact {
-    padding: 2rem;
-    z-index: 1;
-    
+  padding: 2rem;
+  z-index: 1;
 }
-.contanct-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
+.contanct-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 
 #myContact {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 600px; 
-    z-index: 1;
-    gap: 2rem;
-    
-    
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  z-index: 1;
+  gap: 2rem;
 }
 #contactInfo {
-    text-align:left;
-    h2 {
-        color: var(--primary-light);
-    }
-    p {
-        line-height: 1.75rem;
-        padding-top: 2rem;
-      }
+  text-align: left;
+  h2 {
+    color: var(--primary-light);
+  }
+  p {
+    line-height: 1.75rem;
+    padding-top: 2rem;
+  }
 }
 
-
 .social-card-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    width: 100%; 
-    font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  font-size: 1.125rem;
 }
 
 #social a {
-    border: none;
-    margin-right: 2rem;
-
+  border: none;
+  margin-right: 2rem;
 }
 
 .contact-icon {
-    color: var(--secondary);
+  color: var(--secondary);
 }
-    
-#contactForm-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
 
-}  
-  
+#contactForm-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
 #contactForm {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    background-color: var(--foreground);
-    padding: 1.5rem;
-    width: 100%;
-    gap: 1.2rem;
-    border-radius: 10px;
-    border: 2px solid var(--border);
-    
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  background-color: var(--foreground);
+  padding: 1.5rem;
+  width: 100%;
+  gap: 1.2rem;
+  border-radius: 10px;
+  border: 2px solid var(--border);
 }
 
 #contactForm h5 {
-    color: var(--primary-light)
+  color: var(--primary-light);
 }
 
 .contact-btn {
-    font-weight:bold;
-    width:100%;
-    font-size:20px;
-    padding:1rem 0;
-    background-color:var(--primary);
-    color: var(--primary-content);
-    border:none;
-    margin-top: 1rem;
-
+  font-weight: bold;
+  width: 100%;
+  font-size: 20px;
+  padding: 1rem 0;
+  background-color: var(--primary);
+  color: var(--primary-content);
+  border: none;
+  margin-top: 1rem;
 }
 
 .contact-btn:hover {
-    background-color:var(--primary-dark);
+  background-color: var(--primary-dark);
 }
 
-
 @media (min-width: 992px) {
-    .contanct-container{
-        flex-direction: row;
-        flex-wrap: wrap; 
-        align-items: flex-start;
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-    #contactForm-container{
-        width: calc(55% - 2rem);
-       
-    }
-    #myContact {
-       
-        width: calc(45% - 2rem);
-    }
-    
+  .contanct-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  #contactForm-container {
+    width: calc(55% - 2rem);
+  }
+  #myContact {
+    width: calc(45% - 2rem);
+  }
 }

@@ -1,5 +1,5 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
 export const SectionRefsContext = createContext({
-    sectionRefs: null
+  sectionRefs: null,
 });

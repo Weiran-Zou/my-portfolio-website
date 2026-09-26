@@ -1,20 +1,20 @@
-import React, {useState} from "react";
-import "./Project.css"
+import React, { useState } from "react";
+import "./Project.css";
 import MyModal from "../components/MyModal";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const Project = ({item}) => {
+const Project = ({ item }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
-      setIsModalOpen(true);
-  }
-  
+    setIsModalOpen(true);
+  };
+
   const closeModal = () => {
-      setIsModalOpen(false);
-  }
-  
+    setIsModalOpen(false);
+  };
+
   return (
     <>
       <MyModal
@@ -22,62 +22,53 @@ const Project = ({item}) => {
         onCancel={closeModal}
         header={item.title}
         className="project-details-modal"
-        
       >
         <img src={item.img} alt="..." decoding="async" />
-        <div className="card-body" >
+        <div className="card-body">
           <ul className="techList">
-            { item.tech.map(tech =>
-                <li key={tech}>{tech}</li>
-            )}
-              
+            {item.tech.map((tech) => (
+              <li key={tech}>{tech}</li>
+            ))}
           </ul>
           <p className="card-text">{item.description}</p>
-          {item.github && <a
+          {item.github && (
+            <a
+              href={item.github}
+              aria-label="Github"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} className="project-github" />
+            </a>
+          )}
+        </div>
+      </MyModal>
+      <div className="project-card" onClick={openModal}>
+        <div className="card-body">
+          <img src={item.img} alt="..." loading="lazy" decoding="async" />
+          <h5>{item.title}</h5>
+          <ul className="techList">
+            {item.tech.slice(0, 5).map((tech) => (
+              <li key={tech}>{tech}</li>
+            ))}
+          </ul>
+          <p className="card-text">{item.description}</p>
+        </div>
+
+        {item.github && (
+          <a
+            onClick={(e) => e.stopPropagation()}
             href={item.github}
             aria-label="Github"
             target="_blank"
-            rel="noreferrer">
-            <FontAwesomeIcon icon={faGithub} className='project-github'/>
-          </a> }
-        </div>
-       
-          
-      </MyModal>
-      <div 
-        className="project-card" 
-        onClick={openModal}
-      >
-        <div className="card-body"  >
-          <img
-            src={item.img} alt="..."
-            loading="lazy"
-            decoding="async"
-          />
-            <h5 >{item.title}</h5>
-            <ul className="techList">
-              { item.tech.slice(0, 5).map(tech =>
-                  <li key={tech}>{tech}</li>
-              )}
-              
-            </ul>
-            <p className="card-text">{item.description}</p>  
-        </div>
-      
-        {item.github && <a    
-          onClick={(e) => e.stopPropagation()}
-          href={item.github}
-          aria-label="Github"
-          target="_blank"
-          rel="noreferrer">
-          <FontAwesomeIcon icon={faGithub} className='project-github'/>
-        </a> }
-       
-        
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} className="project-github" />
+          </a>
+        )}
       </div>
     </>
-      
-  )
-}
+  );
+};
 
 export default Project;

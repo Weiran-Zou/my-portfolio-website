@@ -1,52 +1,50 @@
 .my-modal {
-    z-index: 100;
-    position: fixed;
-    top: 22vh;
-    left: 5%;
-    right: 5%;
-    width: 90%;
-    background: var(--foreground);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    border-radius: 8px;
-    overflow-y: auto;
-    height: 90vh;
-    z-index: 200;
-  }
-  
-  .my-modal__header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 1rem;
-    background: var(--primary);
-    color: var(--primary-content);
-  }
-  
-  .my-modal__close-btn {
-    background: var(--primary);
-    color: var(--primary-content);
-    font-size: 2rem;
-    font-weight: bold;
-    border: none;
-  }
+  z-index: 100;
+  position: fixed;
+  top: 22vh;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  background: var(--foreground);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 8px;
+  overflow-y: auto;
+  height: 90vh;
+  z-index: 200;
+}
 
-  .my-modal__header h3 {
-    margin: 0.5rem;
+.my-modal__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  color: var(--primary-content);
+}
+
+.my-modal__close-btn {
+  background: var(--primary);
+  color: var(--primary-content);
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+}
+
+.my-modal__header h3 {
+  margin: 0.5rem;
+}
+
+.my-modal__content {
+  padding: 1rem 0.5rem;
+}
+
+.my-modal__footer {
+  padding: 1rem 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .my-modal {
+    left: calc(50% - 20rem);
+    width: 40rem;
   }
-  
-  .my-modal__content {
-    padding: 1rem 0.5rem;
-  }
-  
-  .my-modal__footer {
-    padding: 1rem 0.5rem;
-  }
-  
-  @media (min-width: 768px) {
-    .my-modal {
-      left: calc(50% - 20rem);
-      width: 40rem;
-    }
-  }
-  
-  
+}

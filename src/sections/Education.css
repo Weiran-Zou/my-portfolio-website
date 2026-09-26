@@ -1,28 +1,26 @@
 #education {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .edu-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-   
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .vertical-timeline-element-subtitle {
-    margin-top: 1rem;
-    font-style: italic;
-  
+  margin-top: 1rem;
+  font-style: italic;
 }
 .education-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .achievement-wrapper {
-    color: var(--text-light)
+  color: var(--text-light);
 }
 
-.achievemets-list{
-    margin-left: 2rem;
+.achievemets-list {
+  margin-left: 2rem;
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -12,15 +12,15 @@
   --primary-dark: #6815dc;
   --primary-light: #a067f0;
   --primary-link: #a067f0;
-  
-  --secondary:#ec3847;
+
+  --secondary: #ec3847;
   --secondary-dark: #dc1526;
   --secondary-light: #f06772;
   --secondary-content: #ffffff;
 
   --background: #131122;
   --foreground: #1d1934;
-  --foreground-light: #272247; 
+  --foreground-light: #272247;
   --border: #302956;
 
   --text: #fafafd;
@@ -34,12 +34,12 @@
   --primary: #8338ec;
   --primary-content: #fafafd;
   --primary-dark: #6815dc;
-  --primary-light: #873AF2;
+  --primary-light: #873af2;
   --primary-link: #8338ec;
 
-  --secondary:#C9303D;
-  --secondary-dark: #B82C38;
-  --secondary-light: #D63341;
+  --secondary: #c9303d;
+  --secondary-dark: #b82c38;
+  --secondary-light: #d63341;
   --secondary-content: #ffffff;
   --background: #eceaf5;
   --foreground: #fafafd;
@@ -50,9 +50,8 @@
   --text-light: #4c428a;
   --text-lighter: #6f64b4;
 
-  --error-content: #CC2414;
+  --error-content: #cc2414;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -60,8 +59,8 @@ html {
 }
 
 body {
-  font-family: 'Poppins',  sans-serif;
-  background-color:var(--background); 
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
   color: var(--text);
   overflow-x: hidden;
 }
@@ -79,11 +78,11 @@ a {
 
 p {
   font-size: 1rem;
-  line-height: 1.6; 
+  line-height: 1.6;
 }
 
 h1 {
-  font-size: 2.25rem; 
+  font-size: 2.25rem;
 }
 
 h2 {
@@ -91,60 +90,53 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem ;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 1.25rem ;
-
+  font-size: 1.25rem;
 }
 
 h5 {
-  font-size: 1.125rem ;
+  font-size: 1.125rem;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
- 
   h1 {
-    font-size: 2.5rem ;  
+    font-size: 2.5rem;
   }
   h2 {
-    font-size: 2rem ;  
+    font-size: 2rem;
   }
   h3 {
-    font-size: 1.75rem ;  
+    font-size: 1.75rem;
   }
-  
+
   h4 {
     font-size: 1.5rem;
   }
 
   h5 {
-    font-size: 1.25rem ;
+    font-size: 1.25rem;
   }
-
-
- 
 }
 
 @media (min-width: 1200px) {
-
   p {
-    font-size: 1.125rem; 
-
+    font-size: 1.125rem;
   }
   h1 {
-    font-size: 2.75rem; 
+    font-size: 2.75rem;
   }
 
   h2 {
-    font-size: 2.25rem; 
+    font-size: 2.25rem;
   }
 
   h3 {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
-  
+
   h4 {
     font-size: 1.75rem;
   }
@@ -152,6 +144,4 @@ h5 {
   h5 {
     font-size: 1.5rem;
   }
-
- 
 }

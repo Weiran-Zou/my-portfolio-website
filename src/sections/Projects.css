@@ -1,32 +1,32 @@
 #projects {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .projects-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    width: 100%;
-    /* keep single-column cards from stretching too wide on large phones */
-    max-width: 420px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+  /* keep single-column cards from stretching too wide on large phones */
+  max-width: 420px;
 }
 
 @media (min-width: 768px) {
   #projects {
-      padding-left: 2rem;
-      padding-right: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .projects-container {
-      grid-template-columns: repeat(2, 1fr);
-      max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
   }
 }
 
 @media (min-width: 1280px) {
-    .projects-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .projects-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
