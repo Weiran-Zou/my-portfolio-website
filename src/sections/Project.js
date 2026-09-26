@@ -3,14 +3,12 @@ import "./Project.css"
 import MyModal from "../components/MyModal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
-import { motion } from "framer-motion";
 
 const Project = ({item}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
       setIsModalOpen(true);
-      console.log("hi")
   }
   
   const closeModal = () => {
@@ -26,11 +24,11 @@ const Project = ({item}) => {
         className="project-details-modal"
         
       >
-        <img src={item.img} alt="..." />
+        <img src={item.img} alt="..." decoding="async" />
         <div className="card-body" >
           <ul className="techList">
             { item.tech.map(tech =>
-                <li>{tech}</li>
+                <li key={tech}>{tech}</li>
             )}
               
           </ul>
@@ -51,16 +49,15 @@ const Project = ({item}) => {
         onClick={openModal}
       >
         <div className="card-body"  >
-          <motion.img 
-            src={item.img} alt="..." 
-            whileHover={{
-              scale:1.05
-            }}
+          <img
+            src={item.img} alt="..."
+            loading="lazy"
+            decoding="async"
           />
             <h5 >{item.title}</h5>
             <ul className="techList">
               { item.tech.slice(0, 5).map(tech =>
-                  <li>{tech}</li>
+                  <li key={tech}>{tech}</li>
               )}
               
             </ul>
